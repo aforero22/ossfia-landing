@@ -73,6 +73,26 @@ Cada engagement se cotiza por su alcance real en la call diagnóstico.
 
 ---
 
+### Continuous Conformity Monitoring ⭐ Diferencial único
+
+Incluido en tier **Growth** y **Enterprise**, implementado sobre **Cloudflare Browser Run** (GA abril 2026):
+
+- **Flows críticos ejecutados cada 6 horas** por agentes AI que navegan tu software como un usuario real
+- **Session recordings archivados 365 días** como evidencia auditable (cumple ISO 42001 Annex B + EU AI Act Art. 72)
+- **Semantic evaluation** de outputs LLM — validamos que AURA u otros chats IA respondan correctamente contra golden datasets
+- **Persona-based usability** — simulamos usuarios reales (doctor senior, paciente 65+, admin compliance, contador) y reportamos fricciones
+- **Alert SLA** 30 min para flows críticos, 2 horas para flows high — directo al webhook de tu equipo
+- **Reporte mensual firmado digitalmente** (Ed25519) listo para entregar a auditores
+- **Dashboard en tu portal GlassPlane privado** con timeline de ejecuciones, pass rates, session replay
+
+**Números proyectados para un retainer Growth**:
+> 7 flows críticos × cada 6 horas × 30 días = **840 ejecuciones monitoreadas/mes** con DOM replay completo disponible para tu compliance officer.
+
+**Qué significa esto frente a Credo AI / Holistic AI / Fiddler**:
+Ellos te dan un dashboard de compliance estático que mide artefactos. Nosotros te damos **evidencia viva** de que tu software está funcionando correctamente en producción, 24/7, con trace completo auditable. **Nadie más en el mercado LATAM ofrece esto hoy.**
+
+---
+
 ### Casos reales (anonimizados)
 
 | Sector | Score | Grado | Stack | Highlights |

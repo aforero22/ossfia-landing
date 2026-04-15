@@ -117,6 +117,50 @@ Cada SOW definirá un **Gate Contractual** que es el score mínimo exigido de Gl
 
 El Cliente tendrá acceso en tiempo real al dashboard privado de GlassPlane correspondiente a sus proyectos, con login individualizado. Los scorecards son trazables, firmados digitalmente, y pueden ser compartidos con auditores externos del Cliente.
 
+### 5.5 Continuous Conformity Monitoring (incluido en tier Growth y Enterprise)
+
+Para engagements en tier **Growth** y **Enterprise**, el Proveedor implementará **Continuous Conformity Monitoring** sobre la aplicación del Cliente, consistente en:
+
+1. **Ejecución automatizada de flows críticos** vía Cloudflare Browser Run (GA abril 2026):
+   - Frecuencia mínima: cada 6 horas (configurable por SOW)
+   - Mínimo 3 flows críticos monitoreados (Growth) o 7+ flows (Enterprise)
+   - Cada ejecución realizada por un agente AI navegando la aplicación como usuario real
+   - Incluye validación semántica de outputs LLM cuando aplique (ej: AURA chat)
+
+2. **Session recordings como evidencia auditable**:
+   - Grabación completa de DOM, mouse, keyboard, network de cada ejecución
+   - Retention staggered: 30 días full recording + 90 días sampled + 365 días metadata only
+   - Cifrado AES-256 en reposo (Cloudflare R2)
+   - Firma digital Ed25519 por cada recording (Enterprise)
+   - Acceso del Cliente vía dashboard privado GlassPlane
+
+3. **SLA de alertas**:
+   - Flows marcados `critical`: alerta al webhook del Cliente en máximo **30 minutos** desde el fallo
+   - Flows marcados `high`: alerta en máximo **2 horas**
+   - Flows marcados `medium`/`low`: incluidos en reporte diario
+   - Escalación a 3 niveles si no hay acknowledgment en los tiempos pactados
+
+4. **Reporte mensual auto-generado**:
+   - Total de ejecuciones + pass rate agregado
+   - Listado de fallas con root cause y tiempo de resolución
+   - Mapeo a tags regulatorios aplicables (ISO 42001 Annex B, EU AI Act Art. 72, Ley 1581, SOC 2)
+   - Firmado digitalmente y entregable directo al Compliance Officer del Cliente
+   - Formato PDF + HTML + JSON para integración con herramientas GRC del Cliente
+
+5. **Cumplimiento regulatorio específico**:
+   - **ISO 42001 Annex B** (meaningful human oversight): cada Session Recording es evidencia viva
+   - **EU AI Act Art. 72** (post-market monitoring plan): los reportes mensuales satisfacen esta obligación
+   - **EU AI Act Art. 14** (human oversight measures): Human-in-the-Loop handoff documentado en cada flow crítico
+   - **SOC 2 Type II** (continuous monitoring): las ejecuciones cada 6h son evidence de conformidad operativa
+
+6. **Responsabilidad del Cliente bajo este punto 5.5**:
+   - Proveer un ambiente staging estable donde corran los flows monitoreados
+   - Proveer data sintética para los golden datasets (el Proveedor asiste en diseñarla)
+   - Designar un webhook endpoint activo para recibir alertas (o usar el default email)
+   - Revisar los reportes mensuales y actuar sobre los findings
+
+Este servicio **no tiene costo adicional** sobre el retainer mensual del tier Growth/Enterprise. El Proveedor asume los costos de infraestructura Cloudflare Workers + R2 + Browser Run dentro del retainer pactado.
+
 ## 6. Obligaciones del Proveedor
 
 El Proveedor se compromete a:
