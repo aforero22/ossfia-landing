@@ -58,16 +58,18 @@ Cada entrega viene con:
 
 #### Retainer "Factory as a Service" — Recomendado
 
-| Tier | Precio/mes | Equipo | Sprints/mes | Gate mínimo | Compromiso |
-|---|---:|---|---|---|---|
-| **Starter** | USD 15.000 | 2 humanos + 3 FABs | 1 | Plata (≥61) | 3 meses |
-| **Growth** ⭐ | USD 25.000 | 4 humanos + 6 FABs | 2 | Oro (≥81) | 6 meses |
-| **Enterprise** | desde USD 40.000 | 6+ humanos + FABs ilimitados | Continuous | Oro + drills | 12 meses |
+| Tier | Equipo | Sprints/mes | Gate mínimo | Compromiso |
+|---|---|---|---|---|
+| **Starter** | Humanos + FABs (escala pequeña) | 1 | Plata (≥61) | 3 meses |
+| **Growth** ⭐ | Equipo dedicado humanos + FABs | 2 | Oro (≥81) | 6 meses |
+| **Enterprise** | Equipo ampliado + FABs ilimitados | Continuous | Oro + drills | 12 meses |
+
+Cada engagement se cotiza por su alcance real en la call diagnóstico.
 
 #### Alternativas
 
-- **Fixed-price por fase ADLC**: USD 8K (F01 Discovery) hasta USD 80K (F06 Build completo)
-- **Outcome-based**: precio por módulo entregado + bonus/penalty atado a GlassPlane score
+- **Fixed-price por fase ADLC**: cotización por F01 Discovery, F04 Architecture, F06 Build, etc.
+- **Outcome-based**: por módulo entregado + bonus/penalty atado a GlassPlane score
 
 ---
 
