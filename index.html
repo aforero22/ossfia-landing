@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSSFIA — AI Software Factory as a Service</title>
+  <meta name="description" content="Construimos tu software con IA bajo OSSFIA, nuestra metodologia propia con evidencia automatica de EU AI Act e ISO 42001 en cada entrega. LATAM." />
+  <meta name="author" content="XCloud Solutions" />
+  <meta property="og:title" content="OSSFIA — AI Software Factory as a Service" />
+  <meta property="og:description" content="Desarrollo de software con IA bajo ADLC de 10 fases y scoring automatico de compliance. Retainers desde USD 15.000/mes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ossfia.ai/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300d4ff'/><stop offset='1' stop-color='%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text y='68' x='18' font-size='54' font-family='Inter,sans-serif' font-weight='800' fill='white'>O</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#00d4ff',
+            accent2: '#7c3aed',
+            accent3: '#10b981',
+            accent4: '#f59e0b',
+            accent5: '#ef4444',
+            ink: { 950: '#05070d', 900: '#0a0e1a', 800: '#111827', 700: '#1f2937' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          backgroundImage: {
+            'grid': 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+            'hero-glow': 'radial-gradient(ellipse at top, rgba(0,212,255,0.18), transparent 60%), radial-gradient(ellipse at bottom right, rgba(124,58,237,0.18), transparent 60%)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html, body { font-family: 'Inter', system-ui, sans-serif; }
+    body { background: #05070d; color: #e5e7eb; }
+    .glass { background: rgba(255,255,255,0.035); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); }
+    .glass-strong { background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.10); }
+    .gradient-text { background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .btn-primary { background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%); color: white; font-weight: 600; }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary { transition: all .15s ease; }
+    .btn-ghost { border: 1px solid rgba(255,255,255,0.15); color: #e5e7eb; font-weight: 500; transition: all .15s ease; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.25); }
+    .tier-card { transition: all .2s ease; }
+    .tier-card:hover { transform: translateY(-4px); border-color: rgba(0,212,255,0.3); }
+    .tier-featured { border-color: rgba(0,212,255,0.4) !important; background: linear-gradient(180deg, rgba(0,212,255,0.06), rgba(124,58,237,0.04)); }
+    .tier-featured .tier-badge { background: linear-gradient(135deg, #00d4ff, #7c3aed); color: white; }
+    .phase-chip { padding: .35rem .6rem; font-size: .7rem; font-weight: 600; border-radius: .375rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
+    .gate-chip { display: inline-block; padding: .1rem .4rem; font-size: .6rem; font-weight: 700; border-radius: .25rem; background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .metric-number { font-size: 2.5rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ========== NAV ========== -->
+  <nav class="fixed top-0 inset-x-0 z-50 glass-strong">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-extrabold text-sm">O</div>
+        <span class="font-bold text-lg">OSSFIA</span>
+        <span class="hidden sm:inline text-xs text-gray-400 font-medium border-l border-white/10 pl-2">AI Software Factory</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#problema" class="text-gray-300 hover:text-white transition">Problema</a>
+        <a href="#metodo" class="text-gray-300 hover:text-white transition">Metodo</a>
+        <a href="#glassplane" class="text-gray-300 hover:text-white transition">GlassPlane</a>
+        <a href="#pricing" class="text-gray-300 hover:text-white transition">Servicios</a>
+        <a href="#contacto" class="btn-primary px-4 py-2 rounded-lg text-sm">Agendar call</a>
+      </div>
+      <a href="#contacto" class="md:hidden btn-primary px-3 py-2 rounded-lg text-xs">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="top" class="pt-32 pb-24 bg-hero-glow relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid bg-[size:40px_40px] opacity-30"></div>
+    <div class="relative max-w-6xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-semibold text-accent mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent3 animate-pulse"></span>
+        AI Software Factory — built in LATAM, priced for LATAM
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        Construimos tu software<br class="hidden sm:inline">
+        <span class="gradient-text">con IA, sin perder compliance.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+        OSSFIA es nuestra metodologia propia para construir software con agentes autonomos bajo un ciclo de 10 fases, 16 dimensiones de compliance, y evidencia automatica de <strong class="text-white">EU AI Act</strong> e <strong class="text-white">ISO 42001</strong> en cada entrega.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#contacto" class="btn-primary px-6 py-3.5 rounded-lg text-base">Agendar call diagnostico (30 min) →</a>
+        <a href="#metodo" class="btn-ghost px-6 py-3.5 rounded-lg text-base">Ver como trabajamos</a>
+      </div>
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="metric-number">10</div>
+          <div class="text-xs text-gray-400 mt-2 font-medium">Fases ADLC</div>
+        </div>
+        <div class="text-center">
+          <div class="metric-number">16</div>
+          <div class="text-xs text-gray-400 mt-2 font-medium">Dimensiones compliance</div>
+        </div>
+        <div class="text-center">
+          <div class="metric-number">10</div>
+          <div class="text-xs text-gray-400 mt-2 font-medium">Categorias DLP</div>
+        </div>
+        <div class="text-center">
+          <div class="metric-number">34</div>
+          <div class="text-xs text-gray-400 mt-2 font-medium">Scripts enforcement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEMA ========== -->
+  <section id="problema" class="py-24 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">El problema</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">El mercado tiene herramientas para <em class="not-italic gradient-text">generar</em> codigo con IA.</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold">Nadie tiene un sistema para <em class="not-italic gradient-text">gobernarlo</em>.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl font-extrabold text-accent5 mb-2">1.7×</div>
+          <div class="text-sm text-gray-300 leading-relaxed">mas defectos en codigo generado con IA vs codigo humano <span class="text-gray-500">(CodeRabbit, 8.1M PRs analizados en 2026)</span></div>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl font-extrabold text-accent4 mb-2">91%</div>
+          <div class="text-sm text-gray-300 leading-relaxed">aumento en tiempos de code review desde la adopcion de IA <span class="text-gray-500">(LinearB Benchmarks 2026)</span></div>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl font-extrabold text-accent2 mb-2">€35M</div>
+          <div class="text-sm text-gray-300 leading-relaxed">penalidad maxima EU AI Act, vigente <strong class="text-white">agosto 2026</strong>. Solo 6% de organizaciones tiene estrategia formal de AI governance <span class="text-gray-500">(Gartner)</span></div>
+        </div>
+      </div>
+      <div class="mt-12 glass-strong rounded-xl p-8 text-center">
+        <p class="text-lg text-gray-200 leading-relaxed">
+          Las dev shops tradicionales no saben construir con agentes autonomos.<br>
+          Los vendors de AI governance (Credo AI, Holistic AI, Fiddler) cobran <strong class="text-white">USD 50K+/ano solo por el dashboard</strong> — y tu sigues necesitando quien te construya el software.
+        </p>
+        <p class="text-accent font-semibold mt-4">Nosotros hacemos las dos cosas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== METODO ========== -->
+  <section id="metodo" class="py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-ink-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Nuestro metodo</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">ADLC — Agentic Development Life Cycle</h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto">10 fases, 3 macro-etapas, gates formales con enforcement automatizado. Reemplaza al SDLC tradicional para desarrollo con agentes autonomos.</p>
+      </div>
+
+      <!-- Macro phases -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="glass rounded-xl p-6 border-l-4 border-accent">
+          <div class="text-xs font-bold text-accent uppercase tracking-wider mb-2">Macro 1</div>
+          <h3 class="text-xl font-bold mb-3">🧠 Pensar</h3>
+          <p class="text-sm text-gray-400 mb-4">Estrategia, dominio, conocimiento, arquitectura. Decidir que construir y bajo que restricciones regulatorias.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="phase-chip">F01 Strategy</span>
+            <span class="phase-chip">F02 Domain</span>
+            <span class="phase-chip">F03 Knowledge</span>
+            <span class="phase-chip">F04 Architecture</span>
+          </div>
+          <div class="mt-3 text-xs text-gray-500">Gates: <span class="gate-chip">A</span> <span class="gate-chip">B</span> <span class="gate-chip">C</span></div>
+        </div>
+
+        <div class="glass rounded-xl p-6 border-l-4 border-accent2">
+          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Macro 2</div>
+          <h3 class="text-xl font-bold mb-3">🔨 Construir</h3>
+          <p class="text-sm text-gray-400 mb-4">Contratos, build asistido por IA, TEVV (test + eval + verify + validate), security & compliance.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="phase-chip">F05 Contracts</span>
+            <span class="phase-chip">F06 AI Build</span>
+            <span class="phase-chip">F07 TEVV</span>
+            <span class="phase-chip">F08 Security</span>
+          </div>
+          <div class="mt-3 text-xs text-gray-500">Gates: <span class="gate-chip">D</span> <span class="gate-chip">E</span></div>
+        </div>
+
+        <div class="glass rounded-xl p-6 border-l-4 border-accent3">
+          <div class="text-xs font-bold text-accent3 uppercase tracking-wider mb-2">Macro 3</div>
+          <h3 class="text-xl font-bold mb-3">🚀 Operar</h3>
+          <p class="text-sm text-gray-400 mb-4">Deploy, operacion continua con GenOps, metricas, y evolucion basada en telemetria real.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="phase-chip">F09 Deploy &amp; Ops</span>
+            <span class="phase-chip">F10 Evolve</span>
+          </div>
+          <div class="mt-3 text-xs text-gray-500">Gate: <span class="gate-chip">F</span></div>
+        </div>
+      </div>
+
+      <!-- Key differentiators -->
+      <div class="glass-strong rounded-xl p-8">
+        <h3 class="text-lg font-bold mb-6 text-center">Que hace OSSFIA diferente</h3>
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">Lifecycle completo</strong> — 10 fases vs 3 de Kiro/AWS, 0 de Cursor/Devin</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">6 gates formales</strong> con 34 scripts de enforcement automatizado</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">Compliance multi-regulatorio</strong> — 6 marcos simultaneos (EU AI Act, ISO 42001, NIST, OWASP, SOC 2, Ley 1581)</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">19 modulos de Inteligencia Invisible</strong> evaluables contra cada dominio de negocio</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">10 categorias DLP</strong> con BLOCK/REDACT/WARN automatico (PII, PHI, CDI, JDI, SEC, BIO...)</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">Kill switch con drills verificados</strong> — parada de emergencia auditable</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">Brownfield adoption</strong> (Strangler Fig AI) — adoptable sobre codigo existente</div>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-accent3 font-bold">✓</span>
+            <div><strong class="text-white">Regulacion LATAM nativa</strong> — unico framework AI governance escrito desde Colombia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GLASSPLANE ========== -->
+  <section id="glassplane" class="py-24 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Prueba viva</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Cada entrega viene con evidencia medible</h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+          <strong class="text-white">GlassPlane</strong> es el dashboard privado que damos a cada cliente. Escanea tu proyecto contra 16 dimensiones de compliance en tiempo real. Tu equipo ve el score, tus auditores ven la evidencia.
+        </p>
+      </div>
+
+      <!-- Dashboard preview (placeholder until anonymized screenshot) -->
+      <div class="glass-strong rounded-2xl p-6 md:p-8 mb-12">
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/5">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-extrabold">GP</div>
+            <div>
+              <div class="font-bold">GlassPlane</div>
+              <div class="text-xs text-gray-500">Portafolio del cliente</div>
+            </div>
+          </div>
+          <div class="hidden sm:flex items-center gap-2 text-xs">
+            <span class="flex items-center gap-1.5 text-accent3"><span class="w-1.5 h-1.5 rounded-full bg-accent3 animate-pulse"></span>En vivo</span>
+          </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="glass rounded-lg p-4">
+            <div class="text-xs text-gray-400 mb-1">Repos monitoreados</div>
+            <div class="text-3xl font-extrabold">5</div>
+          </div>
+          <div class="glass rounded-lg p-4">
+            <div class="text-xs text-gray-400 mb-1">Score promedio</div>
+            <div class="text-3xl font-extrabold text-accent4">79</div>
+            <div class="text-xs text-gray-500 mt-1">Plata → Oro</div>
+          </div>
+          <div class="glass rounded-lg p-4">
+            <div class="text-xs text-gray-400 mb-1">Requieren atencion</div>
+            <div class="text-3xl font-extrabold text-accent3">0</div>
+            <div class="text-xs text-gray-500 mt-1">3 saludables</div>
+          </div>
+          <div class="glass rounded-lg p-4">
+            <div class="text-xs text-gray-400 mb-1">Area mas debil</div>
+            <div class="text-xl font-bold mt-1">Gates</div>
+            <div class="text-xs text-gray-500 mt-1">Avg: 48</div>
+          </div>
+        </div>
+
+        <!-- Dimensions chart -->
+        <div class="glass rounded-lg p-5">
+          <div class="text-sm font-semibold mb-4 text-gray-300">Promedios por dimension</div>
+          <div class="space-y-2 text-xs">
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">EU AI Act</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:96%"></div></div><span class="font-bold text-right">96</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Specs</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:94%"></div></div><span class="font-bold text-right">94</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">FinOps</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:94%"></div></div><span class="font-bold text-right">94</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">DORA+DX</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:90%"></div></div><span class="font-bold text-right">90</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">NIST Agent</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:87%"></div></div><span class="font-bold text-right">87</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Task-Flow</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:81%"></div></div><span class="font-bold text-right">81</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Gov IA</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:77%"></div></div><span class="font-bold text-right">77</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Datos</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:75%"></div></div><span class="font-bold text-right">75</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Seguridad</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:73%"></div></div><span class="font-bold text-right">73</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Framework</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:71%"></div></div><span class="font-bold text-right">71</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">SAST/SCA</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:66%"></div></div><span class="font-bold text-right">66</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">OWASP</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent5" style="width:55%"></div></div><span class="font-bold text-right">55</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Gates</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent5" style="width:48%"></div></div><span class="font-bold text-right">48</span></div>
+          </div>
+        </div>
+        <div class="text-xs text-gray-500 text-center mt-4 italic">* Datos ilustrativos del portafolio de un cliente real, anonimizados.</div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          <strong class="text-white">Eres libre de ver hasta nuestras debilidades.</strong> Este portafolio muestra scores reales — EU AI Act 96, pero Gates 48. Asi trabajamos: sin cajas negras. Tus auditores pueden validar la evidencia directamente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING / RETAINERS ========== -->
+  <section id="pricing" class="py-24 border-t border-white/5 bg-gradient-to-b from-ink-900/50 to-transparent">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Factory as a Service</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Retainers mensuales, entregas continuas</h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto">Un equipo dedicado (humanos + agentes) construyendo tu software bajo OSSFIA. Tu pagas por mes, nosotros entregamos con compliance gate contractual.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Starter -->
+        <div class="glass rounded-2xl p-6 tier-card">
+          <div class="tier-badge inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/5 text-gray-300 mb-4">Starter</div>
+          <div class="mb-4">
+            <div class="flex items-baseline gap-1">
+              <span class="text-sm text-gray-400">USD</span>
+              <span class="text-4xl font-extrabold">15K</span>
+              <span class="text-gray-400">/mes</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-1">Minimo 3 meses</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Para MVPs y startups que necesitan validar producto con compliance minimo.</p>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>2 humanos + 3 FABs</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>1 sprint de 2 semanas por mes</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>GlassPlane gate ≥ <strong>Plata</strong> contractual</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Track <em>Lean</em> (4 fases activas)</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Soporte por email, SLA 24h</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Dashboard privado incluido</span></li>
+            <li class="flex gap-2 text-gray-500"><span>—</span><span>Kill switch drills</span></li>
+            <li class="flex gap-2 text-gray-500"><span>—</span><span>Multi-regulatorio full</span></li>
+          </ul>
+          <a href="#contacto" class="block mt-6 btn-ghost text-center py-3 rounded-lg text-sm">Hablemos</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="glass rounded-2xl p-6 tier-card tier-featured relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 tier-badge inline-block px-3 py-1 rounded-full text-xs font-bold">Mas popular</div>
+          <div class="tier-badge inline-block px-3 py-1 rounded-full text-xs font-bold mb-4">Growth</div>
+          <div class="mb-4">
+            <div class="flex items-baseline gap-1">
+              <span class="text-sm text-gray-400">USD</span>
+              <span class="text-4xl font-extrabold">25K</span>
+              <span class="text-gray-400">/mes</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-1">Minimo 6 meses</div>
+          </div>
+          <p class="text-sm text-gray-300 mb-5">Para scaleups que necesitan velocidad y compliance serio, sin contratar un CISO interno.</p>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span><strong>4 humanos + 6 FABs</strong></span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span><strong>2 sprints de 2 semanas</strong> por mes</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>GlassPlane gate ≥ <strong class="text-accent">Oro</strong> contractual</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Track <em>Full</em> (10 fases activas)</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Email + Slack compartido, SLA 8h</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>AIBOM + SBOM firmados digitalmente</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Evidence collector ISO 42001 + SOC 2</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>EU AI Act readiness report mensual</span></li>
+          </ul>
+          <a href="#contacto" class="block mt-6 btn-primary text-center py-3 rounded-lg text-sm">Agendar call</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="glass rounded-2xl p-6 tier-card">
+          <div class="tier-badge inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/5 text-gray-300 mb-4">Enterprise</div>
+          <div class="mb-4">
+            <div class="flex items-baseline gap-1">
+              <span class="text-sm text-gray-400">desde USD</span>
+              <span class="text-4xl font-extrabold">40K</span>
+              <span class="text-gray-400">/mes</span>
+            </div>
+            <div class="text-xs text-gray-500 mt-1">Minimo 12 meses</div>
+          </div>
+          <p class="text-sm text-gray-400 mb-5">Para sectores regulados: salud, gobierno, fintech, educacion publica. Compliance es condicion necesaria.</p>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span><strong>6+ humanos + FABs ilimitados</strong></span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span><strong>Continuous delivery</strong> (no sprints fijos)</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>GlassPlane gate ≥ <strong class="text-accent">Oro</strong>, drills semanales</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Track <em>Full</em> + compliance custom</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Slack dedicado + on-call engineer 24/7</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Kill switch drills verificados trimestrales</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Auditoria externa ISO 42001 / SOC 2 asistida</span></li>
+            <li class="flex gap-2"><span class="text-accent3">✓</span><span>Branded reports para regulador / junta</span></li>
+          </ul>
+          <a href="#contacto" class="block mt-6 btn-ghost text-center py-3 rounded-lg text-sm">Cotizar</a>
+        </div>
+      </div>
+
+      <div class="mt-12 glass rounded-xl p-6 text-sm text-center text-gray-400">
+        <strong class="text-white">¿No encajas en ninguno?</strong> Tambien hacemos <em>fixed-price por fase ADLC</em> (desde USD 8K por F01 Discovery hasta USD 80K por F06 Build completo) y <em>outcome-based</em> con GlassPlane score gates. <a href="#contacto" class="text-accent hover:underline">Cuentanos tu caso →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CASOS / CREDENCIALES ========== -->
+  <section id="casos" class="py-24 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Casos</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Software real, en produccion, con evidencia</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-xl p-6">
+          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Salud</div>
+          <h3 class="text-xl font-bold mb-3">HIS — Historia Clinica Electronica</h3>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-2xl font-extrabold text-accent3">90</div>
+            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent4/20 text-accent4 border border-accent4/40">Oro</div>
+          </div>
+          <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
+            <li>• RIPS JSON + CUPS + CIE-10 compliance</li>
+            <li>• 11 de 14 II aplicables (79%)</li>
+            <li>• Res.1888 FHIR-ready</li>
+            <li>• DLP-PHI enforcement automatico</li>
+          </ul>
+          <div class="text-xs text-gray-500 font-mono">Stack: Hono + Astro + PostgreSQL + Workers AI</div>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">RRHH / Educacion publica</div>
+          <h3 class="text-xl font-bold mb-3">Nomina universitaria</h3>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-2xl font-extrabold text-accent3">88</div>
+            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent4/20 text-accent4 border border-accent4/40">Oro</div>
+          </div>
+          <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
+            <li>• PILA 2000-char + DIAN e-nomina</li>
+            <li>• 7 de 13 II aplicables (54%)</li>
+            <li>• Ley 1581 habeas data full</li>
+            <li>• AURA validation 85%</li>
+          </ul>
+          <div class="text-xs text-gray-500 font-mono">Stack: Astro + Hono + Workers AI + Supabase</div>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">ERP hospitalario</div>
+          <h3 class="text-xl font-bold mb-3">ERP + HCE longitudinal</h3>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-2xl font-extrabold text-accent4">81</div>
+            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent4/20 text-accent4 border border-accent4/40">Oro</div>
+          </div>
+          <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
+            <li>• NIIF PYMES §4-§8 + DIAN pipeline</li>
+            <li>• 104 tablas, 360+ endpoints</li>
+            <li>• AURA 15 tools + 9 workflows</li>
+            <li>• 1070 tests automatizados</li>
+          </ul>
+          <div class="text-xs text-gray-500 font-mono">Stack: Hono JSX + Cloudflare + D1 + R2</div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-gray-500 mt-8 italic">Nombres reales bajo NDA. Firmamos MSA antes de compartir detalles y arquitectura.</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section id="contacto" class="py-24 border-t border-white/5 bg-hero-glow relative">
+    <div class="absolute inset-0 bg-grid bg-[size:40px_40px] opacity-20"></div>
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Contacto</div>
+      <h2 class="text-3xl sm:text-5xl font-bold mb-6">
+        Agendemos una <span class="gradient-text">call diagnostico</span>
+      </h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">
+        30 minutos. Sin costo. Revisamos tu proyecto, identificamos fases prioritarias del ADLC, y te mostramos que scorecard tendrias en GlassPlane hoy.
+      </p>
+      <div class="glass-strong rounded-2xl p-8 max-w-xl mx-auto">
+        <div class="space-y-4 text-left">
+          <div>
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Email directo</div>
+            <a href="mailto:hola@ossfia.ai" class="text-lg font-semibold text-accent hover:underline">hola@ossfia.ai</a>
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Operacion</div>
+            <div class="text-sm">XCloud Solutions · Colombia → LATAM</div>
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Horario</div>
+            <div class="text-sm">Lun a Vie 08:00–18:00 COT (UTC-5)</div>
+          </div>
+        </div>
+        <a href="mailto:hola@ossfia.ai?subject=Call%20diagnostico%20OSSFIA&body=Hola%2C%20me%20gustaria%20agendar%20una%20call%20diagnostico%20para%20revisar%20mi%20proyecto.%0A%0AContexto%3A%20%5Bdescribe%20tu%20proyecto%5D%0ASector%3A%20%5Bsalud%2Ffintech%2Feduc...%5D%0AEquipo%20actual%3A%20%5Bsize%5D%0ATier%20tentativo%3A%20%5BStarter%2FGrowth%2FEnterprise%5D" class="btn-primary inline-block mt-6 px-6 py-3 rounded-lg text-sm">Enviar email de arranque →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-white/5 py-10 text-xs text-gray-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-md bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-extrabold text-[0.65rem]">O</div>
+        <span>OSSFIA — AI Software Factory OS</span>
+        <span class="text-gray-700">|</span>
+        <span>© 2026 XCloud Solutions</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="mailto:hola@ossfia.ai" class="hover:text-white transition">hola@ossfia.ai</a>
+        <a href="https://panel.ossfia.ai" class="hover:text-white transition">Panel cliente →</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-4 text-[0.7rem] text-gray-600 text-center sm:text-left">
+      OSSFIA, GlassPlane, AURA y FAB son marcas registradas de XCloud Solutions. Este sitio no almacena cookies ni analytics de terceros.
+    </div>
+  </footer>
+
+</body>
+</html>

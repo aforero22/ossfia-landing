@@ -1,0 +1,106 @@
+# OSSFIA — AI Software Factory as a Service
+## One-pager comercial
+
+> *Construimos tu software con IA, sin perder compliance.*
+
+---
+
+### El problema
+
+- **1.7×** más defectos en código generado con IA vs código humano (CodeRabbit, 8.1M PRs 2026)
+- **91%** aumento en tiempos de code review desde adopción de IA (LinearB 2026)
+- **€35M** penalidad máxima EU AI Act, vigente agosto 2026
+- Solo el **6%** de organizaciones tiene estrategia formal de AI governance (Gartner)
+
+**El mercado tiene herramientas para generar código con IA. Nadie tiene un sistema para gobernarlo.**
+
+---
+
+### La solución: OSSFIA
+
+**OSSFIA (AI Software Factory OS)** es nuestra metodología propia y herramientas para construir software bajo un ciclo de 10 fases, 16 dimensiones de compliance, y evidencia automatizada de cumplimiento regulatorio.
+
+| | |
+|---|---|
+| **ADLC** | 10 fases agrupadas en Pensar / Construir / Operar, con 6 gates formales de enforcement |
+| **FABs** | Fullstack Agent Builders — células de desarrollo de agentes autónomos + humanos |
+| **GlassPlane** | Dashboard privado que puntúa proyectos contra 16 dimensiones en tiempo real |
+| **AURA** | Capa de IA visible embebida en el producto final (chat, advisor, agent) |
+
+**Diferenciadores vs Kiro / Cursor / Devin / Credo AI**:
+
+- ✅ Lifecycle completo (10 fases vs 3 máx de competidores)
+- ✅ 6 gates con 34 scripts de enforcement automatizado
+- ✅ Compliance multi-regulatorio (6 marcos simultáneos: EU AI Act, ISO 42001, NIST, OWASP, SOC 2, Ley 1581)
+- ✅ 10 categorías DLP con BLOCK/REDACT/WARN automático
+- ✅ 19 módulos de Inteligencia Invisible evaluables
+- ✅ Kill switch con drills verificados
+- ✅ Brownfield adoption (Strangler Fig AI)
+- ✅ **Único framework AI governance escrito desde LATAM para LATAM**
+
+---
+
+### Qué vendemos
+
+No vendemos el framework ni el dashboard. **Vendemos desarrollo de software.**
+
+Cada entrega viene con:
+- Código fuente y tests
+- Scorecard GlassPlane con score ≥ Gate contractual
+- AIBOM + SBOM firmados digitalmente
+- ADRs y documentación técnica
+- Runbooks operacionales
+- Reporte EU AI Act / ISO 42001 / SOC 2 readiness
+
+---
+
+### Modelos de contratación
+
+#### Retainer "Factory as a Service" — Recomendado
+
+| Tier | Precio/mes | Equipo | Sprints/mes | Gate mínimo | Compromiso |
+|---|---:|---|---|---|---|
+| **Starter** | USD 15.000 | 2 humanos + 3 FABs | 1 | Plata (≥61) | 3 meses |
+| **Growth** ⭐ | USD 25.000 | 4 humanos + 6 FABs | 2 | Oro (≥81) | 6 meses |
+| **Enterprise** | desde USD 40.000 | 6+ humanos + FABs ilimitados | Continuous | Oro + drills | 12 meses |
+
+#### Alternativas
+
+- **Fixed-price por fase ADLC**: USD 8K (F01 Discovery) hasta USD 80K (F06 Build completo)
+- **Outcome-based**: precio por módulo entregado + bonus/penalty atado a GlassPlane score
+
+---
+
+### Casos reales (anonimizados)
+
+| Sector | Score | Grado | Stack | Highlights |
+|---|---:|---|---|---|
+| Salud — Historia Clínica Electrónica | **90** | Oro | Hono + Astro + PostgreSQL | RIPS + CIE-10 + FHIR, 11/14 II (79%) |
+| Nómina universitaria pública | **88** | Oro | Astro + Hono + Workers AI | PILA + DIAN e-nómina, Ley 1581 full |
+| ERP hospitalario | **81** | Oro | Hono JSX + Cloudflare D1+R2 | NIIF §4-§8, 104 tablas, 1070 tests |
+
+Nombres reales bajo NDA mutuo. Se comparte arquitectura y evidencia detallada tras firmar.
+
+---
+
+### Por qué ahora
+
+- **EU AI Act** entra en plena vigencia **agosto 2026**. Penalidades hasta €35M.
+- **Ley 1581** (Colombia), **CONPES 4144** AI governance y **ISO 42001** son todas exigibles hoy.
+- Los vendors internacionales cobran USD 50K+/año **solo por el dashboard** — y no construyen tu software.
+- Las dev shops tradicionales no saben construir con agentes autónomos.
+- **Nosotros hacemos las dos cosas.**
+
+---
+
+### Siguiente paso
+
+**Call diagnóstico gratis — 30 min.**
+Revisamos tu proyecto, identificamos fases prioritarias del ADLC, y te mostramos qué scorecard tendrías en GlassPlane hoy.
+
+**hola@ossfia.ai** · https://ossfia.ai · panel cliente: https://panel.ossfia.ai
+
+---
+
+*XCloud Solutions · Colombia → LATAM · © 2026*
+*OSSFIA, GlassPlane, AURA, FAB son marcas registradas de XCloud Solutions.*
