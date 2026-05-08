@@ -921,36 +921,81 @@
   <section id="casos" class="py-24 border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Casos</div>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Software real, en produccion, con evidencia</h2>
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Casos en produccion</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Software real con evidencia auditable</h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+          GlassPlane es nuestro propio control plane — lo construimos para nosotros mismos antes de licenciarlo. Si no lo aplicaramos a Baseline, no podriamos venderlo.
+        </p>
+      </div>
+
+      <!-- HERO CASE: GlassPlane self-hosted -->
+      <div class="glass-strong rounded-2xl p-8 mb-10 border border-accent/20">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent2 flex items-center justify-center font-extrabold text-lg">GP</div>
+              <div>
+                <div class="text-xs font-bold text-accent uppercase tracking-widest">Caso destacado · Dogfooding</div>
+                <h3 class="text-2xl font-bold">GlassPlane control plane</h3>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-5 leading-relaxed">
+              El mismo dashboard que entregamos a clientes lo aplicamos a nuestro propio repo Baseline (github.com/aforero22/baseline). 18 dimensiones de compliance, fingerprint dedup, 9 marcos regulatorios scoreados al mismo tiempo.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">18 dimensiones</strong> compliance live</span></div>
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">122/122 tests</strong> framework verde</span></div>
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">19/0/0</strong> canonical-check</span></div>
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">10 consumers</strong> auto-sync diario</span></div>
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">v10.13</strong> stable, 2026-05-08</span></div>
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">~157K LOC</strong> auto-inventoried</span></div>
+            </div>
+            <div class="mt-5 text-xs text-gray-500 font-mono">Stack: Python 3.10 · Bash · Cloudflare Workers · Wrangler · MCP servers · GitHub Actions</div>
+          </div>
+          <div class="glass rounded-xl p-6 text-center">
+            <div class="text-xs text-gray-400 uppercase tracking-widest mb-2">GlassPlane score</div>
+            <div class="text-6xl font-extrabold gradient-text mb-2">87</div>
+            <div class="text-sm text-accent3 font-bold mb-3">Oro · Healthy</div>
+            <div class="text-xs text-gray-500 leading-relaxed">
+              EU AI Act 96 · Specs 94 · FinOps 94 · DORA 90<br>
+              NIST Agent 87 · Task-Flow 81 · Datos 75
+            </div>
+            <a href="https://github.com/aforero22/baseline" class="block mt-4 btn-ghost text-center py-2 rounded-lg text-xs">github.com/aforero22/baseline</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anonymized cases (NDA) -->
+      <div class="text-center mb-8">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-2">Clientes en produccion · bajo NDA</div>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="glass rounded-xl p-6">
-          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Salud</div>
+          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Salud · IPS Colombia</div>
           <h3 class="text-xl font-bold mb-3">HIS — Historia Clinica Electronica</h3>
           <div class="flex items-center gap-3 mb-4">
             <div class="text-2xl font-extrabold text-accent3">90</div>
-            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent4/20 text-accent4 border border-accent4/40">Oro</div>
+            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent3/20 text-accent3 border border-accent3/40">Oro</div>
           </div>
           <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
             <li>• RIPS JSON + CUPS + CIE-10 compliance</li>
-            <li>• 11 de 14 II aplicables (79%)</li>
             <li>• Res.1888 FHIR-ready</li>
-            <li>• DLP-PHI enforcement automatico</li>
+            <li>• DLP-PHI enforcement runtime</li>
+            <li>• 11 de 14 II aplicables (79%)</li>
           </ul>
           <div class="text-xs text-gray-500 font-mono">Stack: Hono + Astro + PostgreSQL + Workers AI</div>
         </div>
         <div class="glass rounded-xl p-6">
-          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">RRHH / Educacion publica</div>
-          <h3 class="text-xl font-bold mb-3">Nomina universitaria</h3>
+          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Educacion publica · IES</div>
+          <h3 class="text-xl font-bold mb-3">Nomina universitaria + PILA</h3>
           <div class="flex items-center gap-3 mb-4">
             <div class="text-2xl font-extrabold text-accent3">88</div>
-            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent4/20 text-accent4 border border-accent4/40">Oro</div>
+            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent3/20 text-accent3 border border-accent3/40">Oro</div>
           </div>
           <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
             <li>• PILA 2000-char + DIAN e-nomina</li>
-            <li>• 7 de 13 II aplicables (54%)</li>
             <li>• Ley 1581 habeas data full</li>
+            <li>• SNIES + SACES reporting auto</li>
             <li>• AURA validation 85%</li>
           </ul>
           <div class="text-xs text-gray-500 font-mono">Stack: Astro + Hono + Workers AI + Supabase</div>
@@ -966,12 +1011,12 @@
             <li>• NIIF PYMES §4-§8 + DIAN pipeline</li>
             <li>• 104 tablas, 360+ endpoints</li>
             <li>• AURA 15 tools + 9 workflows</li>
-            <li>• 1070 tests automatizados</li>
+            <li>• 1,070 tests automatizados</li>
           </ul>
           <div class="text-xs text-gray-500 font-mono">Stack: Hono JSX + Cloudflare + D1 + R2</div>
         </div>
       </div>
-      <p class="text-center text-xs text-gray-500 mt-8 italic">Nombres reales bajo NDA. Firmamos MSA antes de compartir detalles y arquitectura.</p>
+      <p class="text-center text-xs text-gray-500 mt-8 italic">Nombres comerciales bajo NDA. Firmamos MSA antes de compartir arquitectura detallada y referidos directos.</p>
     </div>
   </section>
 
