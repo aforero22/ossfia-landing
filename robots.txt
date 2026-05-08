@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /templates/instances/
 
 Sitemap: https://ossfia.ai/sitemap.xml
+
+# OSSFIA Baseline + GlassPlane
+# Built in LATAM, governance for AI coding agents
+# Contact: hola@ossfia.ai

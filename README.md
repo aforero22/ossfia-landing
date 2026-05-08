@@ -1,34 +1,54 @@
 # ossfia-landing
 
-Landing pública de **OSSFIA — AI Software Factory as a Service**.
+Landing pública de **OSSFIA — Baseline harness + GlassPlane control plane** para AI coding agents.
 
 - **Dominio**: https://ossfia.ai
 - **Stack**: HTML + Tailwind CDN (sin build step)
 - **Deploy**: Cloudflare Pages
-- **Fecha**: 2026-04-15
+- **Última actualización**: 2026-05-08 (v10.13)
+
+## Posicionamiento
+
+OSSFIA es el sistema operativo para fábricas de software con IA:
+
+- **Baseline** — governance harness multi-runtime para coding agents (Claude Code, Cursor, Copilot, Junie, Codex, Aider, Cline, +8 runtimes más)
+- **GlassPlane** — control plane que mide 18 dimensiones de compliance en vivo
+
+Lo dogfooding sobre nuestro propio repo (`github.com/aforero22/baseline`) y lo licenciamos a clientes en dos modelos: co-creación (adopción) o software factory (turnkey).
 
 ## Estructura
 
 ```
 ossfia-landing/
-  index.html          # Landing 1-page (hero, problema, método, GlassPlane, pricing, casos, contacto)
-  404.html            # Página de error
+  index.html          # Landing 1-page (10 secciones)
+  404.html            # Página de error con branding
   _headers            # Security headers para Cloudflare Pages
   robots.txt
-  sitemap.xml
-  assets/             # Futuros screenshots anonimizados, OG images
+  sitemap.xml         # 10 URLs (anchors)
+  assets/             # Screenshots anonimizados, OG images
+  templates/          # Templates comerciales (NDA, MSA, SOW, one_pager)
 ```
+
+### Secciones de index.html (orden)
+
+1. **Hero** — Baseline + GlassPlane, 5 metrics tiles (14+ runtimes, 10 fases, 18 dim, 93% NIST, 60 scripts)
+2. **Problema** — Mercado tiene generadores, falta governance
+3. **Método** — ADLC 10 fases, 3 macro-etapas, 6 gates
+4. **Engagement** — Co-creación (Modelo A) vs Software Factory (Modelo B)
+5. **GlassPlane** — Dashboard preview con 13 dimensiones live
+6. **Conformity Monitoring** — Continuous 6h cycle (Cloudflare Browser Run)
+7. **Compliance multi-marco** — NIST 93% + 6 packs LATAM + 10 DLP
+8. **Pricing** — Starter / Growth / Enterprise tiers
+9. **vs Alternativas** — Tabla comparativa Cursor/Copilot/MS/Devin/OSSFIA
+10. **Casos** — GlassPlane dogfooding (hero) + 3 NDA cards
+11. **Contacto** — 4 audience CTAs (CIO/Empresa/CISO/Investor)
 
 ## Desarrollo local
 
 ```bash
-# Opción 1: servidor estático simple
 cd C:/Users/afore/Documents/Repos/ossfia-landing
 python3 -m http.server 8000
 # abrir http://localhost:8000
-
-# Opción 2: abrir directamente
-start index.html   # Windows
 ```
 
 ## Deploy a Cloudflare Pages
@@ -48,20 +68,25 @@ En Cloudflare Dashboard → Pages → `ossfia-landing` → Custom domains:
 
 Cloudflare se encarga del certificado SSL automáticamente.
 
+### CI continuo (post-merge to main)
+
+Una vez conectado el repo GitHub al proyecto Cloudflare Pages, cada push a `main` deploya automáticamente. No requiere build (sólo HTML estático).
+
 ## Qué cambia con el tiempo
 
-- `index.html` sección GlassPlane: reemplazar el mock HTML por screenshots reales anonimizados cuando estén (`assets/glassplane-dashboard.png`)
-- `index.html` sección Casos: actualizar con nuevos proyectos y sus scores actuales
-- `index.html` sección Pricing: ajustar tiers según lo que cierre en los primeros 3-6 meses
-- `robots.txt` + `sitemap.xml`: cuando se agreguen sub-páginas (blog, casos detallados)
+- **Cuando v10.14 ship**: actualizar NIST coverage tiles (subir GenAI 80%, agregar SOC 2 pack en estado "active")
+- **Cuando lleguen screenshots reales anonimizados**: reemplazar el mock HTML de GlassPlane por imágenes en `assets/glassplane-*.png`
+- **Cuando cierre primer caso público**: agregar a sección Casos con consentimiento del cliente
+- **OG images**: pendiente generar `assets/og-image.png` (1200x630) para preview en redes
 
 ## Lo que NO va en este repo
 
-- `.claude/` (local de Claude Code, `.gitignored` por default si se inicia git)
-- Screenshots con nombres reales de clientes
-- Propuestas comerciales (viven en otra ubicación con NDA)
-- Código del baseline OSSFIA (repo privado separado)
+- Código del baseline OSSFIA (vive en `github.com/aforero22/baseline`)
+- Datos de clientes con nombres reales (NDA)
+- Propuestas comerciales firmadas (vault separado)
+- `.claude/` (local de Claude Code)
 
 ## Propietario
 
 XCloud Solutions · Alejandro Forero · hola@ossfia.ai
+GitHub: [aforero22/baseline](https://github.com/aforero22/baseline)
