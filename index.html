@@ -11,50 +11,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ossfia.ai/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300d4ff'/><stop offset='1' stop-color='%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text y='68' x='18' font-size='54' font-family='Inter,sans-serif' font-weight='800' fill='white'>O</text></svg>" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            accent: '#00d4ff',
-            accent2: '#7c3aed',
-            accent3: '#10b981',
-            accent4: '#f59e0b',
-            accent5: '#ef4444',
-            ink: { 950: '#05070d', 900: '#0a0e1a', 800: '#111827', 700: '#1f2937' },
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          backgroundImage: {
-            'grid': 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
-            'hero-glow': 'radial-gradient(ellipse at top, rgba(0,212,255,0.18), transparent 60%), radial-gradient(ellipse at bottom right, rgba(124,58,237,0.18), transparent 60%)',
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    html, body { font-family: 'Inter', system-ui, sans-serif; }
-    body { background: #05070d; color: #e5e7eb; }
-    .glass { background: rgba(255,255,255,0.035); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); }
-    .glass-strong { background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.10); }
-    .gradient-text { background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .btn-primary { background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%); color: white; font-weight: 600; }
-    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
-    .btn-primary { transition: all .15s ease; }
-    .btn-ghost { border: 1px solid rgba(255,255,255,0.15); color: #e5e7eb; font-weight: 500; transition: all .15s ease; }
-    .btn-ghost:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.25); }
-    .tier-card { transition: all .2s ease; }
-    .tier-card:hover { transform: translateY(-4px); border-color: rgba(0,212,255,0.3); }
-    .tier-featured { border-color: rgba(0,212,255,0.4) !important; background: linear-gradient(180deg, rgba(0,212,255,0.06), rgba(124,58,237,0.04)); }
-    .tier-featured .tier-badge { background: linear-gradient(135deg, #00d4ff, #7c3aed); color: white; }
-    .phase-chip { padding: .35rem .6rem; font-size: .7rem; font-weight: 600; border-radius: .375rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
-    .gate-chip { display: inline-block; padding: .1rem .4rem; font-size: .6rem; font-weight: 700; border-radius: .25rem; background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
-    .metric-number { font-size: 2.5rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    section { scroll-margin-top: 80px; }
-  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body class="antialiased">
 
@@ -415,19 +373,19 @@
         <div class="glass rounded-lg p-5">
           <div class="text-sm font-semibold mb-4 text-gray-300">Promedios por dimension</div>
           <div class="space-y-2 text-xs">
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">EU AI Act</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:96%"></div></div><span class="font-bold text-right">96</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Specs</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:94%"></div></div><span class="font-bold text-right">94</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">FinOps</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:94%"></div></div><span class="font-bold text-right">94</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">DORA+DX</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:90%"></div></div><span class="font-bold text-right">90</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">NIST Agent</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:87%"></div></div><span class="font-bold text-right">87</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Task-Flow</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3" style="width:81%"></div></div><span class="font-bold text-right">81</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Gov IA</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:77%"></div></div><span class="font-bold text-right">77</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Datos</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:75%"></div></div><span class="font-bold text-right">75</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Seguridad</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:73%"></div></div><span class="font-bold text-right">73</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Framework</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:71%"></div></div><span class="font-bold text-right">71</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">SAST/SCA</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4" style="width:66%"></div></div><span class="font-bold text-right">66</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">OWASP</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent5" style="width:55%"></div></div><span class="font-bold text-right">55</span></div>
-            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Gates</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent5" style="width:48%"></div></div><span class="font-bold text-right">48</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">EU AI Act</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3  w-[96%]"></div></div><span class="font-bold text-right">96</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Specs</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3  w-[94%]"></div></div><span class="font-bold text-right">94</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">FinOps</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3  w-[94%]"></div></div><span class="font-bold text-right">94</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">DORA+DX</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3  w-[90%]"></div></div><span class="font-bold text-right">90</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">NIST Agent</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3  w-[87%]"></div></div><span class="font-bold text-right">87</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Task-Flow</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent3  w-[81%]"></div></div><span class="font-bold text-right">81</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Gov IA</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4  w-[77%]"></div></div><span class="font-bold text-right">77</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Datos</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4  w-[75%]"></div></div><span class="font-bold text-right">75</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Seguridad</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4  w-[73%]"></div></div><span class="font-bold text-right">73</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Framework</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4  w-[71%]"></div></div><span class="font-bold text-right">71</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">SAST/SCA</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent4  w-[66%]"></div></div><span class="font-bold text-right">66</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">OWASP</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent5  w-[55%]"></div></div><span class="font-bold text-right">55</span></div>
+            <div class="grid grid-cols-[140px_1fr_40px] items-center gap-3"><span class="text-gray-400">Gates</span><div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full bg-accent5  w-[48%]"></div></div><span class="font-bold text-right">48</span></div>
           </div>
         </div>
         <div class="text-xs text-gray-500 text-center mt-4 italic">* Datos ilustrativos del portafolio de un cliente real, anonimizados.</div>

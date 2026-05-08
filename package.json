@@ -1,0 +1,25 @@
+{
+  "name": "ossfia-landing",
+  "version": "2.0.0",
+  "description": "OSSFIA landing - Baseline harness + GlassPlane control plane (ossfia.ai)",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o assets/style.css --minify",
+    "watch": "tailwindcss -i src/input.css -o assets/style.css --watch",
+    "deploy": "npm run build && wrangler pages deploy . --project-name=ossfia-landing --branch=main --commit-dirty=true",
+    "serve": "python3 -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aforero22/ossfia-landing.git"
+  },
+  "author": "XCloud Solutions",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/aforero22/ossfia-landing/issues"
+  },
+  "homepage": "https://ossfia.ai",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

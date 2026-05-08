@@ -13,11 +13,12 @@ desktop.ini
 *.swo
 *~
 
-# Node (si en el futuro se migra a Astro)
+# Node — Tailwind build chain
 node_modules/
 dist/
 .astro/
 *.log
+package-lock.json
 
 # Environment
 .env
