@@ -88,5 +88,5 @@ Una vez conectado el repo GitHub al proyecto Cloudflare Pages, cada push a `main
 
 ## Propietario
 
-XCloud Solutions · Alejandro Forero · hola@ossfia.ai
+XCloud Solutions · Alejandro Forero · info@xclos.com
 GitHub: [aforero22/baseline](https://github.com/aforero22/baseline)
