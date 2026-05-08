@@ -52,9 +52,19 @@
       <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
         <strong class="text-white">Baseline</strong> es el governance harness multi-runtime para coding agents — funciona sobre Claude Code, Cursor, Copilot, Junie, Codex, Aider y 8+ runtimes mas. <strong class="text-white">GlassPlane</strong> es el control plane que mide 18 dimensiones de compliance en tiempo real.
       </p>
-      <p class="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+      <p class="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto mb-6 leading-relaxed">
         Lo usamos nosotros para nuestra factory. Lo licenciamos para que lo uses tu.
       </p>
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        <span class="phase-chip">NIST CSF 2.0</span>
+        <span class="phase-chip">NIST AI RMF</span>
+        <span class="phase-chip">EU AI Act</span>
+        <span class="phase-chip">NIS2 (UE)</span>
+        <span class="phase-chip">ISO 42001</span>
+        <span class="phase-chip">SOC 2</span>
+        <span class="phase-chip">Ley 1581</span>
+        <span class="phase-chip">+ LATAM</span>
+      </div>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="#contacto" class="btn-primary px-6 py-3.5 rounded-lg text-base">Agendar demo (30 min) →</a>
         <a href="#metodo" class="btn-ghost px-6 py-3.5 rounded-lg text-base">Ver como funciona</a>
@@ -536,16 +546,29 @@
         </div>
       </div>
 
-      <!-- 6 marcos no-NIST -->
-      <h3 class="text-xl font-bold mb-6 text-center">Mas alla de NIST — packs nativos LATAM + globales</h3>
-      <div class="grid md:grid-cols-3 gap-5 mb-6">
+      <!-- Globales + LATAM packs -->
+      <h3 class="text-xl font-bold mb-2 text-center">Packs globales + LATAM nativos</h3>
+      <p class="text-sm text-gray-500 text-center mb-6">Mismo Baseline, mismo GlassPlane, mismo sprint — scoring contra todos al mismo tiempo</p>
+
+      <!-- Row 1 - Globales -->
+      <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Globales</div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
         <div class="glass rounded-xl p-5">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-2xl">🇪🇺</span>
             <div class="font-bold">EU AI Act</div>
           </div>
-          <div class="text-xs text-accent3 font-bold mb-2">Vigente desde Aug 2 2026</div>
-          <p class="text-xs text-gray-400">Article 14 (human oversight), Annex IV technical doc, conformity assessment procedure. Pack v10.4 + battlecard.</p>
+          <div class="text-xs text-accent3 font-bold mb-2">Vigente Aug 2 2026</div>
+          <p class="text-xs text-gray-400">Article 14 (human oversight), Annex IV technical doc, conformity assessment. Pack + battlecard.</p>
+        </div>
+        <div class="glass rounded-xl p-5 border border-accent/20">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl">🔒</span>
+            <div class="font-bold">NIS2 Directive UE</div>
+            <span class="ml-auto text-[0.6rem] font-bold px-1.5 py-0.5 rounded bg-accent/20 text-accent">NUEVO</span>
+          </div>
+          <div class="text-xs text-accent3 font-bold mb-2">Vigente Oct 17 2024</div>
+          <p class="text-xs text-gray-400">Article 21 — 10 medidas riesgo cyber. 18 sectores criticos UE. ~90% mapping con NIST CSF 2.0. Hasta €10M / 2% revenue.</p>
         </div>
         <div class="glass rounded-xl p-5">
           <div class="flex items-center gap-2 mb-3">
@@ -553,19 +576,24 @@
             <div class="font-bold">ISO/IEC 42001</div>
           </div>
           <div class="text-xs text-accent3 font-bold mb-2">AIMS certification ready</div>
-          <p class="text-xs text-gray-400">Annex A controls, evidence collector script automatizado, mapping a SOC 2 CC + auditoria asistida.</p>
+          <p class="text-xs text-gray-400">Annex A controls, evidence collector script auto, mapping a SOC 2 CC + auditoria asistida.</p>
         </div>
         <div class="glass rounded-xl p-5">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-2xl">🛡️</span>
             <div class="font-bold">SOC 2 Type II</div>
           </div>
-          <div class="text-xs text-accent4 font-bold mb-2">Pack en v10.14 (Q3 2026)</div>
+          <div class="text-xs text-accent4 font-bold mb-2">Pack v10.14 (Q3 2026)</div>
           <p class="text-xs text-gray-400">Trust Service Criteria CC1-CC9, evidence collector existente, mapping cruzado con ISO 42001.</p>
         </div>
+      </div>
+
+      <!-- Row 2 - LATAM nativos -->
+      <div class="text-xs font-bold text-accent2 uppercase tracking-widest mb-3">LATAM nativos</div>
+      <div class="grid md:grid-cols-3 gap-5 mb-6">
         <div class="glass rounded-xl p-5">
           <div class="flex items-center gap-2 mb-3">
-            <span class="text-2xl">🇨🇴</span>
+            <span class="text-2xl">🏥</span>
             <div class="font-bold">Salud IPS Colombia</div>
           </div>
           <div class="text-xs text-accent3 font-bold mb-2">Res 1995, 1438, 1888</div>
@@ -587,6 +615,43 @@
           <div class="text-xs text-accent3 font-bold mb-2">SNIES, SPADIES, SACES</div>
           <p class="text-xs text-gray-400">Reportes academicos, registro calificado, datos personales art. 24 Ley 1581. Pack publico LATAM.</p>
         </div>
+      </div>
+
+      <!-- NIS2 x NIST CSF 2.0 cross-mapping -->
+      <div class="glass-strong rounded-2xl p-8 mb-10">
+        <div class="text-center mb-6">
+          <div class="text-xs font-bold text-accent uppercase tracking-widest mb-2">Cross-mapping NIS2 ↔ NIST CSF 2.0</div>
+          <h3 class="text-xl font-bold mb-2">Un sprint, dos marcos cubiertos</h3>
+          <p class="text-sm text-gray-400 max-w-2xl mx-auto">
+            NIS2 Article 21 (10 medidas de gestion de riesgo cyber) tiene <strong class="text-white">~90% overlap</strong> con NIST CSF 2.0. Lo construimos una vez, reportamos en ambos formatos.
+          </p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left p-2 font-semibold text-gray-300">NIS2 Article 21 — medida</th>
+                <th class="text-left p-2 font-semibold text-gray-300">NIST CSF 2.0 — funcion</th>
+                <th class="text-center p-2 font-semibold text-gray-300">OSSFIA</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-2 text-gray-400">a) Risk analysis & info system security policies</td><td class="p-2 text-gray-400">GOVERN (GV.RM, GV.PO)</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">b) Incident handling</td><td class="p-2 text-gray-400">RESPOND + RECOVER</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">c) Business continuity & backup mgmt</td><td class="p-2 text-gray-400">RECOVER (RC.RP, RC.CO)</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">d) Supply chain security</td><td class="p-2 text-gray-400">IDENTIFY (ID.SC) + AIBOM/SBOM</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">e) Vulnerability handling & disclosure</td><td class="p-2 text-gray-400">PROTECT (PR.IP) + SECURITY.md</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">f) Cybersecurity assessment policies</td><td class="p-2 text-gray-400">DETECT (DE.CM) + audits</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">g) Cyber hygiene + training</td><td class="p-2 text-gray-400">PROTECT (PR.AT)</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">h) Cryptography + encryption</td><td class="p-2 text-gray-400">PROTECT (PR.DS)</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">i) Human resources security & access</td><td class="p-2 text-gray-400">GOVERN (GV.RR-04) + IDENTIFY</td><td class="text-center p-2 text-accent3">✓</td></tr>
+              <tr><td class="p-2 text-gray-400">j) MFA, secure comms, emergency comms</td><td class="p-2 text-gray-400">PROTECT (PR.AA, PR.PS)</td><td class="text-center p-2 text-accent3">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-center text-xs text-gray-500 mt-4 italic">
+          Aplicable a <strong class="text-white">essential entities</strong> (energia, salud, transporte, banca, infra digital, gobierno) y <strong class="text-white">important entities</strong> (manufactura critica, alimentos, residuos, postal). Penalidades hasta €10M o 2% revenue global.
+        </p>
       </div>
 
       <!-- DLP enforcement bar -->
@@ -776,6 +841,14 @@
                 <td class="text-center p-4 text-gray-500">templates</td>
                 <td class="text-center p-4 text-accent5">✗</td>
                 <td class="text-center p-4 text-accent3 bg-accent/5 font-bold">✓ Article 14 + Annex IV</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-white">NIS2 Directive UE (Article 21)</td>
+                <td class="text-center p-4 text-accent5">✗</td>
+                <td class="text-center p-4 text-accent5">✗</td>
+                <td class="text-center p-4 text-accent5">✗</td>
+                <td class="text-center p-4 text-accent5">✗</td>
+                <td class="text-center p-4 text-accent3 bg-accent/5 font-bold">✓ 10 medidas riesgo</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-white">NIST CSF 2.0 + AI RMF</td>
