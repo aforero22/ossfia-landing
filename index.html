@@ -901,32 +901,86 @@
         </div>
       </div>
 
-      <!-- Row 2 - LATAM nativos -->
-      <div class="text-xs font-bold text-accent2 uppercase tracking-widest mb-3">LATAM nativos</div>
+      <!-- Row 2 - LATAM nativos · Apuesta 2 — production-ready packs -->
+      <div class="flex items-baseline justify-between mb-3">
+        <div class="text-xs font-bold text-accent2 uppercase tracking-widest">LATAM nativos · Production validated</div>
+        <div class="text-[0.65rem] font-bold text-accent3 uppercase tracking-wider">Apuesta 2 · v10.17</div>
+      </div>
       <div class="grid md:grid-cols-3 gap-5 mb-6">
-        <div class="glass rounded-xl p-5">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-2xl">🏥</span>
-            <div class="font-bold">Salud IPS Colombia</div>
+        <!-- Pack Salud IPS -->
+        <div class="glass-strong rounded-xl p-5 border border-accent3/20">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🏥</span>
+              <div class="font-bold">Salud IPS Colombia</div>
+            </div>
+            <span class="text-[0.6rem] font-bold px-2 py-0.5 rounded bg-accent3/20 text-accent3 border border-accent3/40">Production</span>
           </div>
-          <div class="text-xs text-accent3 font-bold mb-2">Res 1995, 1438, 1888</div>
-          <p class="text-xs text-gray-400">RIPS JSON, FHIR-ready, CUPS+CIE-10, habilitacion sectorial. DLP-PHI scrubber automatico.</p>
+          <div class="text-xs text-accent3 font-bold mb-2">Res 1995 · 1438 · 1888 · 839</div>
+          <ul class="text-xs text-gray-400 space-y-1.5 mb-3">
+            <li>• RIPS JSON 2025 + CUPS + CIE-10</li>
+            <li>• FHIR-ready interoperabilidad HL7</li>
+            <li>• Habilitación sectorial Res 1438</li>
+            <li>• DLP-PHI + DLP-CDI (menores) BLOCK</li>
+            <li>• SIVIGILA notificacion auto</li>
+          </ul>
+          <div class="text-[0.65rem] text-gray-500 italic mt-3 pt-3 border-t border-white/5">Reference deployment · ERP HCE longitudinal · 1,070 tests automatizados</div>
         </div>
-        <div class="glass rounded-xl p-5">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-2xl">💰</span>
-            <div class="font-bold">Fintech Coop / SFC</div>
+
+        <!-- Pack Fintech Coop -->
+        <div class="glass-strong rounded-xl p-5 border border-accent3/20">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">💰</span>
+              <div class="font-bold">Fintech Coop SFC</div>
+            </div>
+            <span class="text-[0.6rem] font-bold px-2 py-0.5 rounded bg-accent3/20 text-accent3 border border-accent3/40">37 Executors</span>
           </div>
-          <div class="text-xs text-accent3 font-bold mb-2">Circulares 007, 008</div>
-          <p class="text-xs text-gray-400">Superfinanciera reporting, riesgo operacional, AML/KYC, ciberseguridad sectorial. DLP-PFI enforcement.</p>
+          <div class="text-xs text-accent3 font-bold mb-2">Circulares 007 · 008 SFC</div>
+          <ul class="text-xs text-gray-400 space-y-1.5 mb-3">
+            <li>• Superfinanciera operacional + cyber</li>
+            <li>• Riesgo informatico Circular 008</li>
+            <li>• Cooperativas vs bancario tradicional</li>
+            <li>• DLP-PFI + AML/KYC + UIAF reporting</li>
+            <li>• Habeas Data financiero Ley 1581</li>
+          </ul>
+          <div class="text-[0.65rem] text-gray-500 italic mt-3 pt-3 border-t border-white/5">Reference deployment · Plataforma credito cooperativo · 37 Work Agents dual-rail</div>
         </div>
-        <div class="glass rounded-xl p-5">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-2xl">🎓</span>
-            <div class="font-bold">IES Publica + MinEdu</div>
+
+        <!-- Pack IES Pública -->
+        <div class="glass-strong rounded-xl p-5 border border-accent3/20">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🎓</span>
+              <div class="font-bold">IES Pública MinEdu</div>
+            </div>
+            <span class="text-[0.6rem] font-bold px-2 py-0.5 rounded bg-accent3/20 text-accent3 border border-accent3/40">7+ Executors</span>
           </div>
-          <div class="text-xs text-accent3 font-bold mb-2">SNIES, SPADIES, SACES</div>
-          <p class="text-xs text-gray-400">Reportes academicos, registro calificado, datos personales art. 24 Ley 1581. Pack publico LATAM.</p>
+          <div class="text-xs text-accent3 font-bold mb-2">SNIES · SPADIES · SACES</div>
+          <ul class="text-xs text-gray-400 space-y-1.5 mb-3">
+            <li>• Reportes académicos MinEdu auto</li>
+            <li>• Registro calificado + acreditación</li>
+            <li>• PILA + DIAN nómina universitaria</li>
+            <li>• Escalafón docente + puntos salariales</li>
+            <li>• Habeas Data art. 24 educación</li>
+          </ul>
+          <div class="text-[0.65rem] text-gray-500 italic mt-3 pt-3 border-t border-white/5">Reference deployment · Nómina universitaria + escalafón · 7+ Work Agents</div>
+        </div>
+      </div>
+
+      <!-- LATAM Apuesta 2 callout -->
+      <div class="glass-strong rounded-2xl p-6 mb-10 border border-accent2/20">
+        <div class="grid md:grid-cols-3 gap-6 items-center">
+          <div class="md:col-span-2">
+            <div class="text-xs font-bold text-accent2 uppercase tracking-widest mb-2">Apuesta 2 · LATAM mid-market</div>
+            <h3 class="text-lg font-bold mb-2">3 packs validated production. Compatible con cualquier sector LATAM regulado.</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Si eres IPS en Colombia, cooperativa SFC, IES pública o sector regulado equivalente (manufactura crítica, telco, energía LATAM), arrancamos en ~1 día brownfield aditivo. Si tu sector NO está cubierto pero tiene regulación similar, trabajamos en un pack ajustado en 4-8 semanas y queda como referencia.
+            </p>
+          </div>
+          <div class="text-center">
+            <a href="mailto:info@xclos.com?subject=LATAM%20mid-market%20-%20OSSFIA&body=Hola%2C%0A%0ASoy%20%5BNombre%5D%20%5BCargo%5D%20en%20%5BEmpresa%5D.%0A%0ASector%3A%20%5BSalud%20IPS%2FFintech%20Coop%2FIES%2Fmanufactura%2Fotro%5D%0AOperaci%C3%B3n%3A%20%5BColombia%2FBrasil%2FM%C3%A9xico%2FArgentina%2Fmulti-LATAM%5D%0ATama%C3%B1o%20equipo%3A%20%5BN%20devs%5D%0AAlcance%3A%20%5Bbrownfield%2Fnueva%20factory%2Fcompliance%20gap%5D%0A%0AAgendar%20call%20diagn%C3%B3stico." class="btn-primary inline-block px-5 py-2.5 rounded-lg text-xs font-medium">LATAM diagnostic call →</a>
+          </div>
         </div>
       </div>
 
