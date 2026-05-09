@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05070d"/>
+      <stop offset="1" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.2" cy="0.2" r="0.5">
+      <stop stop-color="#00d4ff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.85" cy="0.9" r="0.5">
+      <stop stop-color="#7c3aed" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Logo -->
+  <g transform="translate(80, 80)">
+    <rect width="64" height="64" rx="14" fill="url(#brand)"/>
+    <text x="20" y="48" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="800" fill="white">O</text>
+    <text x="84" y="34" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800" fill="white">OSSFIA</text>
+    <text x="84" y="56" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" fill="#9ca3af">Baseline + GlassPlane · v10.16</text>
+  </g>
+
+  <!-- Pill — version + state-of-art -->
+  <g transform="translate(80, 200)">
+    <rect width="540" height="36" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+    <circle cx="20" cy="18" r="4" fill="#10b981"/>
+    <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#00d4ff">100% aligned · harness eng + governance + evidence</text>
+  </g>
+
+  <!-- H1 -->
+  <text x="80" y="296" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" fill="white">Harness engineering</text>
+  <text x="80" y="376" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" fill="url(#brand)">+ governance + evidence.</text>
+
+  <!-- Subhead -->
+  <text x="80" y="450" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#d1d5db">Las 3 capas que pure harness engineering omite,</text>
+  <text x="80" y="482" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500" fill="#d1d5db">ya productizadas: DLP scrubber · audit trail dual-rail · output guards 9 marcos.</text>
+
+  <!-- Metrics row -->
+  <g transform="translate(80, 540)">
+    <text x="0" y="0" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="800" fill="url(#brand)">14+</text>
+    <text x="0" y="22" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#9ca3af">Runtimes</text>
+
+    <text x="160" y="0" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="800" fill="url(#brand)">9</text>
+    <text x="160" y="22" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#9ca3af">Marcos compliance</text>
+
+    <text x="340" y="0" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="800" fill="url(#brand)">18</text>
+    <text x="340" y="22" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#9ca3af">Dim GlassPlane</text>
+
+    <text x="500" y="0" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="800" fill="url(#brand)">131</text>
+    <text x="500" y="22" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#9ca3af">Linter checks</text>
+
+    <text x="680" y="0" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="800" fill="#10b981">100%</text>
+    <text x="680" y="22" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#9ca3af">Aligned vs state-of-art</text>
+  </g>
+
+  <!-- Domain -->
+  <text x="1080" y="600" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="end">ossfia.ai</text>
+</svg>
