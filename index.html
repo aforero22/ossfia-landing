@@ -24,10 +24,10 @@
         <span class="font-bold text-lg">OSSFIA</span>
         <span class="hidden sm:inline text-xs text-gray-400 font-medium border-l border-white/10 pl-2">AI Software Factory</span>
       </a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <div class="hidden md:flex items-center gap-5 text-sm font-medium">
         <a href="#problema" class="text-gray-300 hover:text-white transition">Problema</a>
+        <a href="#harness" class="text-gray-300 hover:text-white transition">Harness</a>
         <a href="#metodo" class="text-gray-300 hover:text-white transition">Metodo</a>
-        <a href="#engagement" class="text-gray-300 hover:text-white transition">Engagement</a>
         <a href="#glassplane" class="text-gray-300 hover:text-white transition">GlassPlane</a>
         <a href="#compliance" class="text-gray-300 hover:text-white transition">Compliance</a>
         <a href="#vs" class="text-gray-300 hover:text-white transition">vs</a>
@@ -135,6 +135,112 @@
         </p>
         <p class="text-accent font-semibold mt-4">Nosotros hacemos las dos cosas.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== HARNESS ENGINEERING — 3 pilares + 3 capas (NEW v10.15) ========== -->
+  <section id="harness" class="py-24 border-t border-white/5 bg-gradient-to-b from-ink-900/30 to-transparent">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Harness engineering · State-of-art</div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">3 pilares estandar + <span class="gradient-text">3 capas que solo OSSFIA trae</span></h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          Hashimoto, OpenAI y Fowler definieron <strong class="text-white">harness engineering</strong> como las herramientas que dirigen agentes IA hacia objetivos especificos via infraestructura. Pero su patron es de productividad pura — omite governance, DLP y compliance. OSSFIA lo embarca con las 3 capas que regulated industries necesitan.
+        </p>
+      </div>
+
+      <!-- 3 Pilares estandar -->
+      <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Los 3 pilares estandar</div>
+      <div class="grid md:grid-cols-3 gap-5 mb-10">
+        <div class="glass rounded-xl p-6 border-l-4 border-accent">
+          <div class="text-3xl mb-3">🧠</div>
+          <h3 class="font-bold text-white mb-2">Pilar 1 — Context engineering</h3>
+          <p class="text-xs text-gray-400 leading-relaxed mb-3">CLAUDE.md + AGENTS.md + skills + rules + progressive disclosure. Lo que el agente NO puede ver, no existe.</p>
+          <div class="text-xs text-accent3"><strong>OSSFIA:</strong> 19 rules always-on + 50 skills + 14+ runtimes via AGENTS.md universal LCD</div>
+        </div>
+        <div class="glass rounded-xl p-6 border-l-4 border-accent">
+          <div class="text-3xl mb-3">🔧</div>
+          <h3 class="font-bold text-white mb-2">Pilar 2 — Restricciones arquitectonicas</h3>
+          <p class="text-xs text-gray-400 leading-relaxed mb-3">Linters, hooks, capas de dependencia mecanicamente impuestas. Layers unidireccionales (Types → Config → Repo → Service → Runtime → UI).</p>
+          <div class="text-xs text-accent3"><strong>OSSFIA:</strong> 98 linter checks + 8 hooks + dep-graph-check.py ArchUnit-style + spec-first .openspec/</div>
+        </div>
+        <div class="glass rounded-xl p-6 border-l-4 border-accent">
+          <div class="text-3xl mb-3">♻️</div>
+          <h3 class="font-bold text-white mb-2">Pilar 3 — Gestion de entropia</h3>
+          <p class="text-xs text-gray-400 leading-relaxed mb-3">Agentes periodicos validan docs vs codigo, eliminan codigo muerto, detectan drift. El repositorio = unica fuente de verdad.</p>
+          <div class="text-xs text-accent3"><strong>OSSFIA:</strong> daily-drift-check.yml + canonical-check + KNOWLEDGE-01 detecta Confluence/Notion/Slack URLs</div>
+        </div>
+      </div>
+
+      <!-- 3 Capas que OSSFIA agrega — el moat -->
+      <div class="glass-strong rounded-2xl p-8 mb-10 border border-accent2/20">
+        <div class="text-center mb-8">
+          <div class="text-xs font-bold text-accent2 uppercase tracking-widest mb-3">El moat OSSFIA — 3 capas que pure harness eng omite</div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-3">Lo que DIY <span class="text-accent2">NO puede replicar</span> en menos de 12 meses</h3>
+          <p class="text-sm text-gray-400 max-w-2xl mx-auto">El articulo nxcode 'Harness Engineering Complete Guide 2026' es excelente "Harness Engineering 101". OSSFIA es el postgrado completo en regulated industries.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="glass rounded-xl p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl">🛡️</span>
+              <div class="font-bold">Capa 1 — DLP scrubber</div>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed mb-3"><strong class="text-white">10 categorias formales</strong> con BLOCK absoluto (CDI / JDI / SEC / BIO) + REDACT automatico (PII / PHI / PFI / HRI) + WARN auditable (AUD / IPR). Aplicado runtime ANTES de cualquier modelo externo.</p>
+            <div class="text-[0.65rem] text-accent3 font-bold">DIY estimate: 6-12 meses de taxonomia + scrubber + tests + integracion</div>
+          </div>
+          <div class="glass rounded-xl p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl">📜</span>
+              <div class="font-bold">Capa 2 — Audit trail dual-rail</div>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed mb-3">Schema canonico <strong class="text-white">work_agent_executions.sql</strong> + columnas <code class="text-accent">actor_origen</code> + <code class="text-accent">actor_id</code> en tablas operativas. GlassPlane dim 17 work_automation_ratio.</p>
+            <div class="text-[0.65rem] text-accent3 font-bold">DIY estimate: 3-6 meses schema + dual-rail BD + dashboards</div>
+          </div>
+          <div class="glass rounded-xl p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl">⚖️</span>
+              <div class="font-bold">Capa 3 — Output guards multi-marco</div>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed mb-3">AURA 4 niveles + scoring contra <strong class="text-white">9 marcos simultaneos</strong>: NIST CSF 2.0 (93%), AI RMF (93%), SSDF (95%), GenAI (80%), EU AI Act, NIS2, ISO 42001, SOC 2 + LATAM packs.</p>
+            <div class="text-[0.65rem] text-accent3 font-bold">DIY estimate: 12-18 meses POR MARCO. 108-162 meses para los 9.</div>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-sm text-gray-300">
+            <strong class="text-white">Total OSSFIA:</strong> brownfield aditivo en <strong class="text-accent2">~1 dia</strong> con todo incluido. Ahorras 12-24 meses de ingenieria mas el costo de no tenerlo cuando llega EU AI Act enforcement (Aug 2 2026).
+          </p>
+        </div>
+      </div>
+
+      <!-- Mapping side-by-side -->
+      <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3 text-center">Side-by-side · Pure Harness Engineering vs OSSFIA</div>
+      <div class="glass-strong rounded-2xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-white/5 border-b border-white/10">
+                <th class="text-left p-3 font-semibold">Capability</th>
+                <th class="text-center p-3 font-semibold text-gray-400">Pure Harness Engineering (DIY)</th>
+                <th class="text-center p-3 font-semibold bg-gradient-to-b from-accent/15 to-accent2/15 text-white">OSSFIA</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-3 font-medium text-white">Time to ship governance harness</td><td class="text-center p-3 text-gray-400">6-12 meses dedicados</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">~1 dia brownfield</td></tr>
+              <tr><td class="p-3 font-medium text-white">Multi-runtime support</td><td class="text-center p-3 text-gray-400">Lock-in</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">14+ runtimes</td></tr>
+              <tr><td class="p-3 font-medium text-white">DLP scrubber</td><td class="text-center p-3 text-accent5">DIY</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">10 categorias + 20 tests/cat</td></tr>
+              <tr><td class="p-3 font-medium text-white">Audit trail dual-rail</td><td class="text-center p-3 text-accent5">DIY</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">work_agent_executions schema</td></tr>
+              <tr><td class="p-3 font-medium text-white">Compliance frameworks</td><td class="text-center p-3 text-gray-500">0-1</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">9 cross-mapped</td></tr>
+              <tr><td class="p-3 font-medium text-white">CVE freshness</td><td class="text-center p-3 text-gray-500">hardcoded</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">OSV.dev 24h refresh</td></tr>
+              <tr><td class="p-3 font-medium text-white">LATAM regulatorio</td><td class="text-center p-3 text-accent5">invisible</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">Ley 1581, RIPS, SFC, SNIES, LGPD</td></tr>
+              <tr><td class="p-3 font-medium text-white">Costo total año 1 mid-enterprise</td><td class="text-center p-3 text-gray-400">$200-500K (3-5 eng)</td><td class="text-center p-3 text-accent3 bg-accent/5 font-bold">$25-75K LATAM retainer</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="text-center text-xs text-gray-500 italic mt-6 max-w-3xl mx-auto">
+        Battlecard completa con 14 capabilities + 6 objections + 5 closing tactics: <code class="text-accent">framework/reference/marketing/battlecards/BATTLECARD_vs_Pure_Harness_Engineering.md</code> en el repo publico.
+      </p>
     </div>
   </section>
 
