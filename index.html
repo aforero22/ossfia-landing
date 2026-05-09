@@ -1169,58 +1169,92 @@
         </div>
       </div>
 
-      <!-- Anonymized cases (NDA) -->
+      <!-- Anonymized real cases — production-validated (NDA-protected names) -->
       <div class="text-center mb-8">
-        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-2">Clientes en produccion · bajo NDA</div>
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-2">Clientes en produccion · validated</div>
+        <p class="text-xs text-gray-500 max-w-2xl mx-auto">Nombres comerciales bajo NDA. Numeros y stacks son reales. Firmamos MSA + SOW antes de compartir referidos directos y arquitectura detallada.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-xl p-6">
-          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Salud · IPS Colombia</div>
-          <h3 class="text-xl font-bold mb-3">HIS — Historia Clinica Electronica</h3>
+        <!-- Caso 1: Salud IPS Colombia (real, anon) -->
+        <div class="glass rounded-xl p-6 border border-accent3/20">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xl">🏥</span>
+            <div class="text-xs font-bold text-accent2 uppercase tracking-wider">Salud · IPS Colombia</div>
+          </div>
+          <h3 class="text-xl font-bold mb-3">ERP hospitalario + HCE longitudinal</h3>
           <div class="flex items-center gap-3 mb-4">
             <div class="text-2xl font-extrabold text-accent3">90</div>
             <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent3/20 text-accent3 border border-accent3/40">Oro</div>
+            <div class="text-[0.6rem] text-accent3 font-bold uppercase tracking-wider">Production live</div>
           </div>
           <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
-            <li>• RIPS JSON + CUPS + CIE-10 compliance</li>
-            <li>• Res.1888 FHIR-ready</li>
-            <li>• DLP-PHI enforcement runtime</li>
-            <li>• 11 de 14 II aplicables (79%)</li>
+            <li>• <strong class="text-white">RIPS JSON</strong> Res 1888/2025 + CUPS + CIE-10</li>
+            <li>• <strong class="text-white">FHIR-ready</strong> Res 839 interoperabilidad</li>
+            <li>• DLP-PHI + DLP-CDI (menores) enforcement runtime</li>
+            <li>• 104 tablas · 360+ endpoints · 1,070 tests</li>
+            <li>• <strong class="text-white">AURA 15 tools + 9 workflows</strong></li>
           </ul>
-          <div class="text-xs text-gray-500 font-mono">Stack: Hono + Astro + PostgreSQL + Workers AI</div>
+          <div class="text-xs text-accent3 font-bold mb-1">Pack: pack_salud_ips v1.0 productized</div>
+          <div class="text-xs text-gray-500 font-mono">Stack: Hono JSX + Cloudflare D1 + R2 + Workers AI</div>
         </div>
-        <div class="glass rounded-xl p-6">
-          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">Educacion publica · IES</div>
-          <h3 class="text-xl font-bold mb-3">Nomina universitaria + PILA</h3>
+
+        <!-- Caso 2: Fintech Coop Colombia (real, anon) -->
+        <div class="glass rounded-xl p-6 border border-accent3/20">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xl">💰</span>
+            <div class="text-xs font-bold text-accent2 uppercase tracking-wider">Fintech · Cooperativa SFC</div>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Plataforma de credito cooperativo</h3>
           <div class="flex items-center gap-3 mb-4">
             <div class="text-2xl font-extrabold text-accent3">88</div>
             <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent3/20 text-accent3 border border-accent3/40">Oro</div>
+            <div class="text-[0.6rem] text-accent3 font-bold uppercase tracking-wider">37 Executors live</div>
           </div>
           <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
-            <li>• PILA 2000-char + DIAN e-nomina</li>
-            <li>• Ley 1581 habeas data full</li>
-            <li>• SNIES + SACES reporting auto</li>
-            <li>• AURA validation 85%</li>
+            <li>• <strong class="text-white">Circular 007 + 008 SFC</strong> ciberseguridad</li>
+            <li>• Riesgo operacional + AML/KYC + UIAF reporting</li>
+            <li>• DLP-PFI scrubber + cuentas + tarjetas</li>
+            <li>• Ley 1581 financiero + Habeas Data</li>
+            <li>• <strong class="text-white">37 Work Agents</strong> dual-rail en produccion</li>
           </ul>
-          <div class="text-xs text-gray-500 font-mono">Stack: Astro + Hono + Workers AI + Supabase</div>
+          <div class="text-xs text-accent3 font-bold mb-1">Pack: pack_fintech_coop v1.0 productized</div>
+          <div class="text-xs text-gray-500 font-mono">Stack: Hono + Cloudflare Workers + D1 + Workers AI</div>
         </div>
-        <div class="glass rounded-xl p-6">
-          <div class="text-xs font-bold text-accent2 uppercase tracking-wider mb-2">ERP hospitalario</div>
-          <h3 class="text-xl font-bold mb-3">ERP + HCE longitudinal</h3>
+
+        <!-- Caso 3: IES Pública Colombia (real, anon) -->
+        <div class="glass rounded-xl p-6 border border-accent3/20">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xl">🎓</span>
+            <div class="text-xs font-bold text-accent2 uppercase tracking-wider">Educacion publica · IES</div>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Nomina universitaria + escalafon</h3>
           <div class="flex items-center gap-3 mb-4">
-            <div class="text-2xl font-extrabold text-accent4">81</div>
-            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent4/20 text-accent4 border border-accent4/40">Oro</div>
+            <div class="text-2xl font-extrabold text-accent3">85</div>
+            <div class="px-2 py-0.5 rounded text-xs font-bold bg-accent3/20 text-accent3 border border-accent3/40">Oro</div>
+            <div class="text-[0.6rem] text-accent3 font-bold uppercase tracking-wider">7+ Executors live</div>
           </div>
           <ul class="text-sm text-gray-400 space-y-1.5 mb-4">
-            <li>• NIIF PYMES §4-§8 + DIAN pipeline</li>
-            <li>• 104 tablas, 360+ endpoints</li>
-            <li>• AURA 15 tools + 9 workflows</li>
-            <li>• 1,070 tests automatizados</li>
+            <li>• <strong class="text-white">PILA 2000-char</strong> + DIAN e-nomina</li>
+            <li>• <strong class="text-white">SNIES + SPADIES + SACES</strong> reporting MinEdu</li>
+            <li>• Escalafon docente + puntos salariales + investigacion</li>
+            <li>• Ley 1581 art 24 (datos sensibles educacion)</li>
+            <li>• 7+ Work Agents · AURA validation 85%</li>
           </ul>
-          <div class="text-xs text-gray-500 font-mono">Stack: Hono JSX + Cloudflare + D1 + R2</div>
+          <div class="text-xs text-accent3 font-bold mb-1">Pack: pack_ies_publica v1.0 productized</div>
+          <div class="text-xs text-gray-500 font-mono">Stack: Astro + Hono + Cloudflare D1 + Workers AI</div>
         </div>
       </div>
-      <p class="text-center text-xs text-gray-500 mt-8 italic">Nombres comerciales bajo NDA. Firmamos MSA antes de compartir arquitectura detallada y referidos directos.</p>
+
+      <!-- Trust signal -->
+      <div class="mt-8 glass rounded-xl p-6 max-w-3xl mx-auto text-center">
+        <div class="text-xs font-bold text-accent uppercase tracking-widest mb-2">Pre-validation</div>
+        <p class="text-sm text-gray-300">
+          Estos 3 casos representan los <strong class="text-white">3 packs LATAM productized</strong> que ofrecemos. Cada cliente tuvo brownfield aditivo. Sus reguladores no necesitan recibir un PDF para ver compliance — leen el GlassPlane scorecard live.
+        </p>
+        <p class="text-xs text-gray-500 italic mt-3">
+          Firmamos MSA + SOW antes de compartir nombre comercial, arquitectura detallada o referidos directos. <a href="#contacto" class="text-accent hover:underline">Agenda call diagnóstico</a> para que podamos discutir tu caso.
+        </p>
+      </div>
     </div>
   </section>
 
