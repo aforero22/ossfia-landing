@@ -5,7 +5,7 @@ Landing pública de **OSSFIA — Baseline harness + GlassPlane control plane** p
 - **Dominio**: https://ossfia.ai
 - **Stack**: HTML + Tailwind CDN (sin build step)
 - **Deploy**: Cloudflare Pages
-- **Última actualización**: 2026-05-08 (v10.13)
+- **Última actualización**: 2026-05-15 (v10.24.0)
 
 ## Posicionamiento
 
