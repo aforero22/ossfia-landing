@@ -39,6 +39,7 @@
         <a href="#harness" class="text-gray-300 hover:text-white transition">Harness</a>
         <a href="#carrier" class="text-gray-300 hover:text-white transition">Insurance carriers</a>
         <a href="#glassplane" class="text-gray-300 hover:text-white transition">GlassPlane</a>
+        <a href="#api-first" class="text-gray-300 hover:text-white transition">API-First</a>
         <a href="#compliance" class="text-gray-300 hover:text-white transition">Compliance</a>
         <a href="#casos" class="text-gray-300 hover:text-white transition">Cases</a>
         <a href="#vs" class="text-gray-300 hover:text-white transition">vs</a>
@@ -61,7 +62,7 @@
       <div class="flex flex-wrap justify-center items-center gap-2 mb-6">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-semibold text-accent">
           <span class="w-1.5 h-1.5 rounded-full bg-accent3 animate-pulse"></span>
-          v10.17 · Harness engineering + governance + evidence · 100% aligned
+          v10.24.0 · Harness engineering + governance + evidence · 100% aligned
         </div>
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-accent4" style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25);">
           <span>🔒</span>
@@ -84,7 +85,8 @@
         <span class="phase-chip"><span class="text-accent3">●</span> Feb 11 2026 — OpenAI institutionalizes</span>
         <span class="phase-chip"><span class="text-accent">●</span> Mar 17 2026 — OSSFIA v4.0 ships</span>
         <span class="phase-chip"><span class="text-accent3">●</span> Apr 2 2026 — Fowler formalizes</span>
-        <span class="phase-chip border border-accent2/40"><span class="text-accent2">●</span> May 9 2026 — OSSFIA v10.17 strategic decisions sprint</span>
+        <span class="phase-chip"><span class="text-accent3">●</span> May 9 2026 — OSSFIA v10.17 strategic decisions sprint</span>
+        <span class="phase-chip border border-accent2/40"><span class="text-accent2">●</span> May 15 2026 — OSSFIA v10.24.0 — API-First Workflow + FAB Fleet methodology + pnpm/uv supply chain</span>
       </div>
       <div class="flex flex-wrap justify-center gap-2 mb-10">
         <span class="phase-chip">NIST CSF 2.0</span>
@@ -471,6 +473,31 @@
           Same Baseline harness. Same GlassPlane. Same 18 compliance dimensions. Same regulatory evidence. The difference is <strong class="text-white">who writes the code</strong> — your team or ours — not how rigorous the governance is.
         </p>
       </div>
+
+      <!-- FAB Fleet Methodology callout (v10.21 case study) -->
+      <div class="mt-8 glass-strong rounded-2xl p-8 border border-accent2/20">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <div class="text-xs font-bold text-accent2 uppercase tracking-widest mb-3">FAB Fleet Methodology · v10.21 → v10.23</div>
+            <h3 class="text-lg font-bold mb-2">Empirical case study at scale</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Measured field data, not theory: <strong class="text-white">117 agents coordinated across 11 fleets</strong> in ~2 calendar days on a regulated EU mid-market AI platform. 99% success rate, 126 squash-merges to main, ~1,995 files delivered, ~$545 in agent cost.
+            </p>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">What changed in v10.21</div>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              <strong class="text-white">Mandatory re-audit tier</strong> — every fleet ships with its own independent <code class="text-accent3">verified_by</code> auditor that re-scores with evidence (<code>file:line</code> + grep + harness re-run). Caught real over-claims in every wave. Security score went 38.9 → 79.0 over 7 measured waves, monotonically.
+            </p>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-accent3 uppercase tracking-widest mb-3">What changed in v10.23 (ADR-030)</div>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              <strong class="text-white">Cross-fleet pipelining</strong> — the N+1 producer wave runs concurrent with N's <code>re_audit</code> when the file partitions are disjoint. Compresses wall-clock further while preserving the audit gate. The methodology learns from its own evidence and applies the learning.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -734,6 +761,75 @@
     </div>
   </section>
 
+  <!-- ========== API-FIRST WORKFLOW — NEW v10.24 ========== -->
+  <section id="api-first" class="py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-ink-900/20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-semibold text-accent2 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent2 animate-pulse"></span>
+          NEW — v10.24.0 API-First Workflow Skill (2026-05-15)
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">API-First in <span class="gradient-text">governance</span>, not in generation.</h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+          The API contract <strong class="text-white">before</strong> the code. OSSFIA Spectral blocks PRs without a spec in CI — Postman and Stoplight live <em class="not-italic text-white">outside the repo</em> and cannot do that. We are <strong class="text-white">complementary, not a competitor</strong>: they generate (mocks, SDKs, docs); we govern (DLP, bounded contexts, Dual-Rail deprecation).
+        </p>
+      </div>
+
+      <!-- 4-feature grid -->
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl mb-3">📋</div>
+          <h3 class="font-bold text-white mb-2">13 custom Spectral rules</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            <code class="text-accent3">x-bounded-context</code> (links every operation to F02 capability_map), <code class="text-accent3">x-actor-role</code> (AEGIS executor classification), <code class="text-accent3">x-dlp-category</code> (data sensitivity per endpoint), <code class="text-accent3">x-deprecation-date</code> (90d Dual-Rail policy), semver enforcement on breaking changes. <strong class="text-white">Unique in the market</strong> — these rules require knowledge of <em class="not-italic">your</em> capability_map and data_classification.
+          </p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl mb-3">⛔</div>
+          <h3 class="font-bold text-white mb-2">3 linter checks → hard CI fail</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            <code class="text-accent3">API-LINT-01</code> — Spectral evidence required in the PR.<br>
+            <code class="text-accent3">API-DIFF-01</code> — oasdiff breaking change ↔ <code>migration_tracking.yaml</code> traceability.<br>
+            <code class="text-accent3">MOCK-01</code> — <code>mock_enabled</code> flag in F05 forces Prism mock before backend exists.<br>
+            <strong class="text-white">No honor system</strong> — no spec, no merge.
+          </p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl mb-3">🔌</div>
+          <h3 class="font-bold text-white mb-2">Opt-in wrapper, never bundled</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            <code class="text-accent3">baseline/scripts/api-first-tools.sh</code> is a passthrough to <strong class="text-white">spectral</strong>, <strong class="text-white">prism</strong> and <strong class="text-white">oasdiff</strong>. OSSFIA does NOT bundle or fork these tools — we govern the contract, we don't compete on tooling. You install them on your own (npm/brew) when you need them; the wrapper just standardizes invocation across tracks.
+          </p>
+        </div>
+        <div class="glass rounded-xl p-6 border border-accent/30">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="font-bold text-white mb-2">vs Postman / Stoplight / Speakeasy</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-white">They generate; we govern.</strong> Mocks, SDKs in 50+ languages, hosted contract testing UI — those are their job and we don't replicate them. What no platform outside the repo can do: <strong class="text-white">block the PR if the spec isn't versioned correctly</strong>. Use both. <a href="https://github.com/aforero22/baseline/blob/main/framework/reference/marketing/battlecards/BATTLECARD_vs_Postman_Stoplight.md" class="text-accent underline hover:text-accent3" target="_blank" rel="noopener">Read the full battlecard →</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom narrative -->
+      <div class="glass-strong rounded-2xl p-8 border border-accent2/20">
+        <div class="grid md:grid-cols-3 gap-6 text-sm">
+          <div>
+            <div class="text-xs font-bold text-accent5 uppercase tracking-wider mb-2">Postman / Stoplight / Speakeasy</div>
+            <p class="text-gray-400">Excellent code-gen platforms (mocks, SDKs, docs). Live <em class="not-italic">outside</em> your repo. Honor system on whether the spec stays in sync with main.</p>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-accent4 uppercase tracking-wider mb-2">Pure Spectral / OAS rules</div>
+            <p class="text-gray-400">Generic OAS lint. Cannot know <em class="not-italic">your</em> bounded contexts, DLP classification, AEGIS autonomy levels — those are organization-specific rules.</p>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-accent3 uppercase tracking-wider mb-2">OSSFIA (governance harness)</div>
+            <p class="text-gray-300">13 custom Spectral rules + 3 CI checks + 90d deprecation policy enforcement. Reference: <code class="text-accent3">API_First_Workflow_Guide.md</code>. The contract lives in <code class="text-accent3">.openspec/</code> and both Postman and OSSFIA can read it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== CONFORMITY MONITORING — UNIQUE DIFFERENTIATOR ========== -->
   <section id="conformity" class="py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-ink-900/30">
     <div class="max-w-6xl mx-auto px-6">
@@ -822,7 +918,7 @@
       <div class="glass-strong rounded-2xl p-8 mb-10">
         <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
           <div>
-            <h3 class="text-xl font-bold mb-1">NIST stack coverage · v10.17</h3>
+            <h3 class="text-xl font-bold mb-1">NIST stack coverage · v10.24.0</h3>
             <p class="text-sm text-gray-400">Auditable against <strong class="text-white">CSF 2.0</strong> (CSWP 29, Feb 2024), <strong class="text-white">AI RMF 1.0</strong> (AI 100-1), GenAI Profile (AI 600-1), SSDF v1.1 (SP 800-218 + 218A), SP 800-53r5</p>
           </div>
           <div class="flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-semibold text-accent3">
@@ -1033,6 +1129,46 @@
         </p>
       </div>
 
+      <!-- Supply Chain Hardening — pnpm + uv (v10.22) -->
+      <div class="glass-strong rounded-2xl p-8 mb-10 border border-accent2/20">
+        <div class="text-center mb-6">
+          <div class="text-xs font-bold text-accent2 uppercase tracking-widest mb-2">Supply chain hardening · v10.22</div>
+          <h3 class="text-xl font-bold mb-2">pnpm + uv as the OSSFIA standard</h3>
+          <p class="text-sm text-gray-400 max-w-3xl mx-auto">
+            Not an aesthetic preference. The defaults of <code class="text-accent3">npm</code> and <code class="text-accent3">pip</code> are known attack vectors — recent malware chains exploit them. The OSSFIA standard closes those defaults by construction.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="glass rounded-lg p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl">📦</span>
+              <div class="font-bold">pnpm 10 — JS/TS</div>
+            </div>
+            <ul class="text-xs text-gray-400 space-y-2">
+              <li><strong class="text-white">No lifecycle scripts by default</strong> — <code>postinstall</code> is the #1 npm malware vector. pnpm 10 only runs scripts from the <code class="text-accent3">onlyBuiltDependencies</code> allowlist.</li>
+              <li><strong class="text-white">minimumReleaseAge ~1440 min</strong> — defense against recent typosquatting: pnpm refuses versions published less than N minutes ago.</li>
+              <li><strong class="text-white">Content-addressed store + strict symlinks</strong> — eliminates phantom dependencies. Only declared packages can be imported.</li>
+              <li><strong class="text-white">--frozen-lockfile in CI</strong> — fails if <code>pnpm-lock.yaml</code> doesn't match <code>package.json</code>. No silent drift.</li>
+            </ul>
+          </div>
+          <div class="glass rounded-lg p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl">🐍</span>
+              <div class="font-bold">uv — Python</div>
+            </div>
+            <ul class="text-xs text-gray-400 space-y-2">
+              <li><strong class="text-white">Hermetic resolver</strong> — deterministic resolution, no implicit network calls during install.</li>
+              <li><strong class="text-white">Hash-pinned <code>uv.lock</code></strong> — every artifact hashed; <code>uv sync --frozen</code> verifies hashes before installation.</li>
+              <li><strong class="text-white">Speed as side-effect</strong> — 10-100× faster than pip, but the point is the security model, not the benchmark.</li>
+              <li><strong class="text-white">Standard for the whole ecosystem</strong> — <code>init-project.sh</code> scaffolds it, <code>init-brownfield.sh</code> adds it additively.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center text-xs text-gray-500 mt-6 italic">
+          Reference: <code class="text-accent3">Package_Manager_Supply_Chain_Guide.md</code> + <code class="text-accent3">Supply_Chain_Security_Guide.md</code>. Same standard for the entire ecosystem (Baseline, consumers, examples).
+        </p>
+      </div>
+
       <!-- DLP enforcement bar -->
       <div class="glass-strong rounded-2xl p-8">
         <div class="text-center mb-6">
@@ -1164,7 +1300,7 @@
         <div class="text-xs font-bold text-accent uppercase tracking-widest mb-3">vs alternatives — including "build your own harness"</div>
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">Tools <em class="not-italic gradient-text">generate</em>. <br>OSSFIA <em class="not-italic gradient-text">governs with compliance</em>.</h2>
         <p class="text-gray-400 text-lg max-w-3xl mx-auto">
-          We don't compete with Cursor / Copilot / Codex (we use them as runtimes). Nor with DIY harness engineering (we applaud it but add the 3 layers). 16-capability table, 6 columns — including the "Pure Harness Engineering" route that sells 6-12 months of engineer time.
+          We don't compete with Cursor / Copilot / Codex (we use them as runtimes). Nor with DIY harness engineering (we applaud it but add the 3 layers). Nor with Postman / Stoplight / Speakeasy — <strong class="text-white">they generate, we govern</strong> (complementary, not competitors). 18-capability table, 6 columns — including the "Pure Harness Engineering" route that sells 6-12 months of engineer time.
         </p>
       </div>
 
@@ -1310,6 +1446,24 @@
                 <td class="text-center p-3 text-gray-500">hardcoded</td>
                 <td class="text-center p-3 text-accent3 bg-accent/5 font-bold">✓ OSV.dev 24h refresh</td>
               </tr>
+              <tr class="bg-white/[0.02]">
+                <td class="p-3 font-medium text-white">API contract governance — CI hard fail<br><span class="text-[0.65rem] font-normal text-gray-500">(vs Postman / Stoplight / Speakeasy)</span></td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-gray-500">DIY Spectral</td>
+                <td class="text-center p-3 text-accent3 bg-accent/5 font-bold">✓ 13 custom rules + 3 checks</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-white">Supply chain hardening (pnpm + uv)</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-accent5">✗</td>
+                <td class="text-center p-3 text-gray-500">DIY config</td>
+                <td class="text-center p-3 text-accent3 bg-accent/5 font-bold">✓ pinned standard</td>
+              </tr>
               <tr>
                 <td class="p-3 font-medium text-white">Time to ship governance</td>
                 <td class="text-center p-3 text-gray-500">N/A (tool)</td>
@@ -1342,12 +1496,17 @@
         </div>
       </div>
 
-      <!-- Bottom narrative — 4 cards (added DIY) -->
-      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Bottom narrative — 5 cards (added Postman/Stoplight as complement, not competitor) -->
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
         <div class="glass rounded-xl p-6">
           <div class="text-3xl mb-3">🛠️</div>
           <h3 class="font-bold text-white mb-2">Cursor / Copilot / Codex</h3>
           <p class="text-sm text-gray-400">Excellent code generators. Your team will keep using them under OSSFIA — we are the harness, not the competitor.</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="text-3xl mb-3">📋</div>
+          <h3 class="font-bold text-white mb-2">Postman / Stoplight / Speakeasy</h3>
+          <p class="text-sm text-gray-400">Excellent API code-gen platforms (mocks, SDKs, docs). They live outside the repo and cannot block PRs without a spec. <strong class="text-white">Complementary, not competitors</strong> — use both.</p>
         </div>
         <div class="glass rounded-xl p-6">
           <div class="text-3xl mb-3">📊</div>
@@ -1398,7 +1557,7 @@
               <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">122/122 tests</strong> framework green</span></div>
               <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">19/0/0</strong> canonical-check</span></div>
               <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">10 consumers</strong> daily auto-sync</span></div>
-              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">v10.17</strong> stable, 2026-05-09</span></div>
+              <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">v10.24.0</strong> stable, 2026-05-15</span></div>
               <div class="flex gap-2"><span class="text-accent3 font-bold">✓</span><span class="text-gray-400"><strong class="text-white">~157K LOC</strong> auto-inventoried</span></div>
             </div>
             <div class="mt-5 text-xs text-gray-500 font-mono">Stack: Python 3.10 · Bash · Cloudflare Workers · Wrangler · MCP servers · GitHub Actions</div>
